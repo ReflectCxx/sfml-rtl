@@ -11,12 +11,14 @@ add_subdirectory(SFML)
 # ------------------------------------
 add_subdirectory(ReflectionTemplateLib)
 
-add_executable(MySFMLApp src/main.cpp)
+add_executable(MySFMLApp ReflectSFMLApp/main.cpp)
 
 target_link_libraries(MySFMLApp PRIVATE
     SFML::Graphics
     SFML::Window
     SFML::System
+    SFML::Audio
+    SFML::Network
 )
 
 # ----------------------------------------------
