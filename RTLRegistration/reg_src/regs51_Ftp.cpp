@@ -46,6 +46,9 @@ namespace regs51::type1 {
                                  .build());
 
         fns.push_back(rtl::type().member<sf::Ftp::Response>()
+                                 .constructor<sf::Ftp::Response::Status, std::string>().build());
+
+        fns.push_back(rtl::type().member<sf::Ftp::Response>()
                                  .methodConst(cxx::type::sf::Ftp::Response::fn::isOk::id)
                                  .build(&sf::Ftp::Response::isOk));
 

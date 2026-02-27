@@ -41,6 +41,9 @@ namespace regs52::type0 {
                                  .build(&sf::Http::Request::setField));
 
         fns.push_back(rtl::type().member<sf::Http::Request>()
+                                 .constructor<const std::string &, sf::Http::Request::Method, const std::string &>().build());
+
+        fns.push_back(rtl::type().member<sf::Http::Request>()
                                  .method(cxx::type::sf::Http::Request::fn::setMethod::id)
                                  .build(&sf::Http::Request::setMethod));
 
