@@ -19,35 +19,21 @@
  *****************************************************************************/
 
 
-#include <SFML/Window/Joystick.hpp>
+#include <SFML/Window/Touch.hpp>
+#include <SFML/System/Vector2.hpp>
 
 #include "../reg_ids.h"
 #include "../reg_decls.h"
 
 
-namespace regs76::fn {
+namespace regs82::fn {
     void init(std::vector<rtl::Function>& fns) {
 
-        fns.push_back(rtl::type().function(cxx::fn::sf::Joystick::getButtonCount::id)
-                                 .build(&sf::Joystick::getButtonCount));
+        fns.push_back(rtl::type().function(cxx::fn::sf::Touch::isDown::id)
+                                 .build(&sf::Touch::isDown));
 
-        fns.push_back(rtl::type().function(cxx::fn::sf::Joystick::isConnected::id)
-                                 .build(&sf::Joystick::isConnected));
-
-        fns.push_back(rtl::type().function(cxx::fn::sf::Joystick::hasAxis::id)
-                                 .build(&sf::Joystick::hasAxis));
-
-        fns.push_back(rtl::type().function(cxx::fn::sf::Joystick::isButtonPressed::id)
-                                 .build(&sf::Joystick::isButtonPressed));
-
-        fns.push_back(rtl::type().function(cxx::fn::sf::Joystick::getIdentification::id)
-                                 .build(&sf::Joystick::getIdentification));
-
-        fns.push_back(rtl::type().function(cxx::fn::sf::Joystick::getAxisPosition::id)
-                                 .build(&sf::Joystick::getAxisPosition));
-
-        fns.push_back(rtl::type().function(cxx::fn::sf::Joystick::update::id)
-                                 .build(&sf::Joystick::update));
+        fns.push_back(rtl::type().function<unsigned int>(cxx::fn::sf::Touch::getPosition::id)
+                                 .build(&sf::Touch::getPosition));
     }
 }
 

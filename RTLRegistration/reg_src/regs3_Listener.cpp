@@ -29,14 +29,17 @@
 namespace regs3::fn {
     void init(std::vector<rtl::Function>& fns) {
 
+        fns.push_back(rtl::type().function(cxx::fn::sf::Listener::setDirection::id)
+                                 .build(&sf::Listener::setDirection));
+
+        fns.push_back(rtl::type().function(cxx::fn::sf::Listener::setGlobalVolume::id)
+                                 .build(&sf::Listener::setGlobalVolume));
+
         fns.push_back(rtl::type().function(cxx::fn::sf::Listener::getDirection::id)
                                  .build(&sf::Listener::getDirection));
 
         fns.push_back(rtl::type().function(cxx::fn::sf::Listener::getGlobalVolume::id)
                                  .build(&sf::Listener::getGlobalVolume));
-
-        fns.push_back(rtl::type().function(cxx::fn::sf::Listener::setCone::id)
-                                 .build(&sf::Listener::setCone));
 
         fns.push_back(rtl::type().function(cxx::fn::sf::Listener::setVelocity::id)
                                  .build(&sf::Listener::setVelocity));
@@ -50,8 +53,8 @@ namespace regs3::fn {
         fns.push_back(rtl::type().function(cxx::fn::sf::Listener::getVelocity::id)
                                  .build(&sf::Listener::getVelocity));
 
-        fns.push_back(rtl::type().function(cxx::fn::sf::Listener::setDirection::id)
-                                 .build(&sf::Listener::setDirection));
+        fns.push_back(rtl::type().function(cxx::fn::sf::Listener::setCone::id)
+                                 .build(&sf::Listener::setCone));
 
         fns.push_back(rtl::type().function(cxx::fn::sf::Listener::getCone::id)
                                  .build(&sf::Listener::getCone));

@@ -42,6 +42,8 @@ namespace cxx {
             regs78::fn::init(fns);
             regs79::fn::init(fns);
             regs80::fn::init(fns);
+            regs82::fn::init(fns);
+            regs84::fn::init(fns);
             regs51::type0::init(fns);
             regs51::type1::init(fns);
             regs51::type2::init(fns);

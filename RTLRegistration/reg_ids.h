@@ -26,36 +26,6 @@ namespace cxx {
 
 namespace fn {
 namespace sf {
-namespace PlaybackDevice {
-namespace setDevice {
-    inline constexpr std::string_view id = "sf::PlaybackDevice::setDevice";
-    inline constexpr std::array<std::string_view, 1> signatures = {
-        "bool(const std::string &)"
-    };
-}}}}
-
-namespace fn {
-namespace sf {
-namespace Listener {
-namespace getVelocity {
-    inline constexpr std::string_view id = "sf::Listener::getVelocity";
-    inline constexpr std::array<std::string_view, 1> signatures = {
-        "sf::Vector3f(void)"
-    };
-}}}}
-
-namespace fn {
-namespace sf {
-namespace Listener {
-namespace getPosition {
-    inline constexpr std::string_view id = "sf::Listener::getPosition";
-    inline constexpr std::array<std::string_view, 1> signatures = {
-        "sf::Vector3f(void)"
-    };
-}}}}
-
-namespace fn {
-namespace sf {
 namespace Joystick {
 namespace update {
     inline constexpr std::string_view id = "sf::Joystick::update";
@@ -92,6 +62,26 @@ namespace sleep {
         "void(sf::Time)"
     };
 }}}
+
+namespace fn {
+namespace sf {
+namespace Listener {
+namespace setGlobalVolume {
+    inline constexpr std::string_view id = "sf::Listener::setGlobalVolume";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(float)"
+    };
+}}}}
+
+namespace fn {
+namespace sf {
+namespace Listener {
+namespace setDirection {
+    inline constexpr std::string_view id = "sf::Listener::setDirection";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(const sf::Vector3f &)"
+    };
+}}}}
 
 namespace fn {
 namespace sf {
@@ -135,6 +125,36 @@ namespace setVelocity {
 
 namespace fn {
 namespace sf {
+namespace PlaybackDevice {
+namespace setDevice {
+    inline constexpr std::string_view id = "sf::PlaybackDevice::setDevice";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(const std::string &)"
+    };
+}}}}
+
+namespace fn {
+namespace sf {
+namespace Listener {
+namespace getVelocity {
+    inline constexpr std::string_view id = "sf::Listener::getVelocity";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Vector3f(void)"
+    };
+}}}}
+
+namespace fn {
+namespace sf {
+namespace Listener {
+namespace getPosition {
+    inline constexpr std::string_view id = "sf::Listener::getPosition";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Vector3f(void)"
+    };
+}}}}
+
+namespace fn {
+namespace sf {
 namespace Mouse {
 namespace isButtonPressed {
     inline constexpr std::string_view id = "sf::Mouse::isButtonPressed";
@@ -145,21 +165,21 @@ namespace isButtonPressed {
 
 namespace fn {
 namespace sf {
-namespace Listener {
-namespace setCone {
-    inline constexpr std::string_view id = "sf::Listener::setCone";
+namespace Joystick {
+namespace hasAxis {
+    inline constexpr std::string_view id = "sf::Joystick::hasAxis";
     inline constexpr std::array<std::string_view, 1> signatures = {
-        "void(const sf::Listener::Cone &)"
+        "bool(unsigned int, sf::Joystick::Axis)"
     };
 }}}}
 
 namespace fn {
 namespace sf {
 namespace Listener {
-namespace setDirection {
-    inline constexpr std::string_view id = "sf::Listener::setDirection";
+namespace setCone {
+    inline constexpr std::string_view id = "sf::Listener::setCone";
     inline constexpr std::array<std::string_view, 1> signatures = {
-        "void(const sf::Vector3f &)"
+        "void(const sf::Listener::Cone &)"
     };
 }}}}
 
@@ -186,10 +206,30 @@ namespace getUpVector {
 namespace fn {
 namespace sf {
 namespace Sensor {
+namespace setEnabled {
+    inline constexpr std::string_view id = "sf::Sensor::setEnabled";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(sf::Sensor::Type, bool)"
+    };
+}}}}
+
+namespace fn {
+namespace sf {
+namespace Sensor {
 namespace getValue {
     inline constexpr std::string_view id = "sf::Sensor::getValue";
     inline constexpr std::array<std::string_view, 1> signatures = {
         "sf::Vector3f(sf::Sensor::Type)"
+    };
+}}}}
+
+namespace fn {
+namespace sf {
+namespace Keyboard {
+namespace setVirtualKeyboardVisible {
+    inline constexpr std::string_view id = "sf::Keyboard::setVirtualKeyboardVisible";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(bool)"
     };
 }}}}
 
@@ -219,6 +259,56 @@ namespace setString {
     inline constexpr std::string_view id = "sf::Clipboard::setString";
     inline constexpr std::array<std::string_view, 1> signatures = {
         "void(const sf::String &)"
+    };
+}}}}
+
+namespace fn {
+namespace sf {
+namespace Joystick {
+namespace getButtonCount {
+    inline constexpr std::string_view id = "sf::Joystick::getButtonCount";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "unsigned int(unsigned int)"
+    };
+}}}}
+
+namespace fn {
+namespace sf {
+namespace Joystick {
+namespace isConnected {
+    inline constexpr std::string_view id = "sf::Joystick::isConnected";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(unsigned int)"
+    };
+}}}}
+
+namespace fn {
+namespace sf {
+namespace Joystick {
+namespace isButtonPressed {
+    inline constexpr std::string_view id = "sf::Joystick::isButtonPressed";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(unsigned int, unsigned int)"
+    };
+}}}}
+
+namespace fn {
+namespace sf {
+namespace Joystick {
+namespace getIdentification {
+    inline constexpr std::string_view id = "sf::Joystick::getIdentification";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Joystick::Identification(unsigned int)"
+    };
+}}}}
+
+namespace fn {
+namespace sf {
+namespace Joystick {
+namespace getAxisPosition {
+    inline constexpr std::string_view id = "sf::Joystick::getAxisPosition";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "float(unsigned int, sf::Joystick::Axis)"
     };
 }}}}
 
@@ -290,6 +380,36 @@ namespace isAvailable {
     inline constexpr std::string_view id = "sf::Sensor::isAvailable";
     inline constexpr std::array<std::string_view, 1> signatures = {
         "bool(sf::Sensor::Type)"
+    };
+}}}}
+
+namespace fn {
+namespace sf {
+namespace Touch {
+namespace isDown {
+    inline constexpr std::string_view id = "sf::Touch::isDown";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(unsigned int)"
+    };
+}}}}
+
+namespace fn {
+namespace sf {
+namespace Touch {
+namespace getPosition {
+    inline constexpr std::string_view id = "sf::Touch::getPosition";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Vector2i(unsigned int)"
+    };
+}}}}
+
+namespace fn {
+namespace sf {
+namespace Vulkan {
+namespace isAvailable {
+    inline constexpr std::string_view id = "sf::Vulkan::isAvailable";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(bool)"
     };
 }}}}
 
@@ -371,6 +491,18 @@ namespace Http {
 namespace Request {
     inline constexpr std::string_view id = "sf::Http::Request";
 }}}}
+
+namespace type {
+namespace sf {
+namespace Http {
+namespace Request {
+namespace fn {
+namespace setHttpVersion {
+    inline constexpr std::string_view id = "setHttpVersion";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(unsigned int, unsigned int)"
+    };
+}}}}}}
 
 namespace type {
 namespace sf {

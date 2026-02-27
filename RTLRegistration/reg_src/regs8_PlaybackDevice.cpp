@@ -19,6 +19,7 @@
  *****************************************************************************/
 
 
+#include <xstring>
 #include <SFML/Audio/PlaybackDevice.hpp>
 
 #include "../reg_ids.h"

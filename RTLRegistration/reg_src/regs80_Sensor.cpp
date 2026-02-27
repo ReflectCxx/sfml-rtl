@@ -34,6 +34,9 @@ namespace regs80::fn {
 
         fns.push_back(rtl::type().function(cxx::fn::sf::Sensor::getValue::id)
                                  .build(&sf::Sensor::getValue));
+
+        fns.push_back(rtl::type().function(cxx::fn::sf::Sensor::setEnabled::id)
+                                 .build(&sf::Sensor::setEnabled));
     }
 }
 

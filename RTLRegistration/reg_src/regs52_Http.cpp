@@ -19,8 +19,8 @@
  *****************************************************************************/
 
 
-#include <SFML/Network/Http.hpp>
 #include <xstring>
+#include <SFML/Network/Http.hpp>
 
 #include "../reg_ids.h"
 #include "../reg_decls.h"
@@ -31,6 +31,10 @@ namespace regs52::type0 {
 
         fns.push_back(rtl::type().record<sf::Http::Request>(cxx::type::sf::Http::Request::id)
                                  .build());
+
+        fns.push_back(rtl::type().member<sf::Http::Request>()
+                                 .method(cxx::type::sf::Http::Request::fn::setHttpVersion::id)
+                                 .build(&sf::Http::Request::setHttpVersion));
 
         fns.push_back(rtl::type().member<sf::Http::Request>()
                                  .method(cxx::type::sf::Http::Request::fn::setField::id)

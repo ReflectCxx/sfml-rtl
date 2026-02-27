@@ -79,6 +79,16 @@ namespace regs80::fn {
 }
 
 
+namespace regs82::fn {
+    void init(std::vector<rtl::Function>&);
+}
+
+
+namespace regs84::fn {
+    void init(std::vector<rtl::Function>&);
+}
+
+
 namespace regs51::type0 {
     void init(std::vector<rtl::Function>&);
 }

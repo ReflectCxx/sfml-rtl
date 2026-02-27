@@ -43,6 +43,9 @@ namespace regs78::fn {
 
         fns.push_back(rtl::type().function(cxx::fn::sf::Keyboard::getDescription::id)
                                  .build(&sf::Keyboard::getDescription));
+
+        fns.push_back(rtl::type().function(cxx::fn::sf::Keyboard::setVirtualKeyboardVisible::id)
+                                 .build(&sf::Keyboard::setVirtualKeyboardVisible));
     }
 }
 
