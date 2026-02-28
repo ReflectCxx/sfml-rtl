@@ -20,6 +20,7 @@
 
 
 #include <xstring>
+#include <SFML/System/Time.hpp>
 #include <SFML/Network/Http.hpp>
 
 #include "../reg_ids.h"
@@ -83,6 +84,26 @@ namespace regs52::type1 {
         fns.push_back(rtl::type().member<sf::Http::Response>()
                                  .methodConst(cxx::type::sf::Http::Response::fn::getBody::id)
                                  .build(&sf::Http::Response::getBody));
+    }
+}
+
+
+namespace regs52::type2 {
+    void init(std::vector<rtl::Function>& fns) {
+
+        fns.push_back(rtl::type().record<sf::Http>(cxx::type::sf::Http::id)
+                                 .build());
+
+        fns.push_back(rtl::type().member<sf::Http>()
+                                 .method(cxx::type::sf::Http::fn::setHost::id)
+                                 .build(&sf::Http::setHost));
+
+        fns.push_back(rtl::type().member<sf::Http>()
+                                 .constructor<const std::string &, unsigned short>().build());
+
+        fns.push_back(rtl::type().member<sf::Http>()
+                                 .method(cxx::type::sf::Http::fn::sendRequest::id)
+                                 .build(&sf::Http::sendRequest));
     }
 }
 

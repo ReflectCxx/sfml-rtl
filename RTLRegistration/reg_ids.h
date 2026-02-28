@@ -26,45 +26,6 @@ namespace cxx {
 
 namespace fn {
 namespace sf {
-namespace Joystick {
-namespace update {
-    inline constexpr std::string_view id = "sf::Joystick::update";
-    inline constexpr std::array<std::string_view, 1> signatures = {
-        "void(void)"
-    };
-}}}}
-
-namespace fn {
-namespace sf {
-namespace Listener {
-namespace getCone {
-    inline constexpr std::string_view id = "sf::Listener::getCone";
-    inline constexpr std::array<std::string_view, 1> signatures = {
-        "sf::Listener::Cone(void)"
-    };
-}}}}
-
-namespace fn {
-namespace sf {
-namespace swap {
-    inline constexpr std::string_view id = "sf::swap";
-    inline constexpr std::array<std::string_view, 2> signatures = {
-        "void(sf::Texture &, sf::Texture &)",
-        "void(sf::VertexBuffer &, sf::VertexBuffer &)"
-    };
-}}}
-
-namespace fn {
-namespace sf {
-namespace sleep {
-    inline constexpr std::string_view id = "sf::sleep";
-    inline constexpr std::array<std::string_view, 1> signatures = {
-        "void(sf::Time)"
-    };
-}}}
-
-namespace fn {
-namespace sf {
 namespace Listener {
 namespace setGlobalVolume {
     inline constexpr std::string_view id = "sf::Listener::setGlobalVolume";
@@ -136,8 +97,8 @@ namespace setDevice {
 namespace fn {
 namespace sf {
 namespace Listener {
-namespace getVelocity {
-    inline constexpr std::string_view id = "sf::Listener::getVelocity";
+namespace getPosition {
+    inline constexpr std::string_view id = "sf::Listener::getPosition";
     inline constexpr std::array<std::string_view, 1> signatures = {
         "sf::Vector3f(void)"
     };
@@ -146,8 +107,8 @@ namespace getVelocity {
 namespace fn {
 namespace sf {
 namespace Listener {
-namespace getPosition {
-    inline constexpr std::string_view id = "sf::Listener::getPosition";
+namespace getVelocity {
+    inline constexpr std::string_view id = "sf::Listener::getVelocity";
     inline constexpr std::array<std::string_view, 1> signatures = {
         "sf::Vector3f(void)"
     };
@@ -180,6 +141,36 @@ namespace setCone {
     inline constexpr std::string_view id = "sf::Listener::setCone";
     inline constexpr std::array<std::string_view, 1> signatures = {
         "void(const sf::Listener::Cone &)"
+    };
+}}}}
+
+namespace fn {
+namespace sf {
+namespace Joystick {
+namespace update {
+    inline constexpr std::string_view id = "sf::Joystick::update";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(void)"
+    };
+}}}}
+
+namespace fn {
+namespace sf {
+namespace swap {
+    inline constexpr std::string_view id = "sf::swap";
+    inline constexpr std::array<std::string_view, 2> signatures = {
+        "void(sf::Texture &, sf::Texture &)",
+        "void(sf::VertexBuffer &, sf::VertexBuffer &)"
+    };
+}}}
+
+namespace fn {
+namespace sf {
+namespace Listener {
+namespace getCone {
+    inline constexpr std::string_view id = "sf::Listener::getCone";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Listener::Cone(void)"
     };
 }}}}
 
@@ -254,61 +245,20 @@ namespace err {
 
 namespace fn {
 namespace sf {
+namespace sleep {
+    inline constexpr std::string_view id = "sf::sleep";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(sf::Time)"
+    };
+}}}
+
+namespace fn {
+namespace sf {
 namespace Clipboard {
 namespace setString {
     inline constexpr std::string_view id = "sf::Clipboard::setString";
     inline constexpr std::array<std::string_view, 1> signatures = {
         "void(const sf::String &)"
-    };
-}}}}
-
-namespace fn {
-namespace sf {
-namespace Joystick {
-namespace getButtonCount {
-    inline constexpr std::string_view id = "sf::Joystick::getButtonCount";
-    inline constexpr std::array<std::string_view, 1> signatures = {
-        "unsigned int(unsigned int)"
-    };
-}}}}
-
-namespace fn {
-namespace sf {
-namespace Joystick {
-namespace isConnected {
-    inline constexpr std::string_view id = "sf::Joystick::isConnected";
-    inline constexpr std::array<std::string_view, 1> signatures = {
-        "bool(unsigned int)"
-    };
-}}}}
-
-namespace fn {
-namespace sf {
-namespace Joystick {
-namespace isButtonPressed {
-    inline constexpr std::string_view id = "sf::Joystick::isButtonPressed";
-    inline constexpr std::array<std::string_view, 1> signatures = {
-        "bool(unsigned int, unsigned int)"
-    };
-}}}}
-
-namespace fn {
-namespace sf {
-namespace Joystick {
-namespace getIdentification {
-    inline constexpr std::string_view id = "sf::Joystick::getIdentification";
-    inline constexpr std::array<std::string_view, 1> signatures = {
-        "sf::Joystick::Identification(unsigned int)"
-    };
-}}}}
-
-namespace fn {
-namespace sf {
-namespace Joystick {
-namespace getAxisPosition {
-    inline constexpr std::string_view id = "sf::Joystick::getAxisPosition";
-    inline constexpr std::array<std::string_view, 1> signatures = {
-        "float(unsigned int, sf::Joystick::Axis)"
     };
 }}}}
 
@@ -365,6 +315,56 @@ namespace getDescription {
 
 namespace fn {
 namespace sf {
+namespace Joystick {
+namespace getButtonCount {
+    inline constexpr std::string_view id = "sf::Joystick::getButtonCount";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "unsigned int(unsigned int)"
+    };
+}}}}
+
+namespace fn {
+namespace sf {
+namespace Joystick {
+namespace isConnected {
+    inline constexpr std::string_view id = "sf::Joystick::isConnected";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(unsigned int)"
+    };
+}}}}
+
+namespace fn {
+namespace sf {
+namespace Joystick {
+namespace isButtonPressed {
+    inline constexpr std::string_view id = "sf::Joystick::isButtonPressed";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(unsigned int, unsigned int)"
+    };
+}}}}
+
+namespace fn {
+namespace sf {
+namespace Joystick {
+namespace getIdentification {
+    inline constexpr std::string_view id = "sf::Joystick::getIdentification";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Joystick::Identification(unsigned int)"
+    };
+}}}}
+
+namespace fn {
+namespace sf {
+namespace Joystick {
+namespace getAxisPosition {
+    inline constexpr std::string_view id = "sf::Joystick::getAxisPosition";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "float(unsigned int, sf::Joystick::Axis)"
+    };
+}}}}
+
+namespace fn {
+namespace sf {
 namespace Mouse {
 namespace setPosition {
     inline constexpr std::string_view id = "sf::Mouse::setPosition";
@@ -412,6 +412,3973 @@ namespace isAvailable {
         "bool(bool)"
     };
 }}}}
+
+namespace type {
+namespace sf {
+namespace SoundBuffer {
+    inline constexpr std::string_view id = "sf::SoundBuffer";
+}}}
+
+namespace type {
+namespace sf {
+namespace SoundBuffer {
+namespace fn {
+namespace getChannelCount {
+    inline constexpr std::string_view id = "getChannelCount";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "unsigned int(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundBuffer {
+namespace fn {
+namespace loadFromFile {
+    inline constexpr std::string_view id = "loadFromFile";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(const std::filesystem::path &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundBuffer {
+namespace fn {
+namespace saveToFile {
+    inline constexpr std::string_view id = "saveToFile";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(const std::filesystem::path &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundBuffer {
+namespace fn {
+namespace getSampleRate {
+    inline constexpr std::string_view id = "getSampleRate";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "unsigned int(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundBuffer {
+namespace fn {
+namespace getSamples {
+    inline constexpr std::string_view id = "getSamples";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "const short *(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundBuffer {
+namespace fn {
+namespace loadFromMemory {
+    inline constexpr std::string_view id = "loadFromMemory";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(const void *, unsigned long long)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundBuffer {
+namespace fn {
+namespace getSampleCount {
+    inline constexpr std::string_view id = "getSampleCount";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "unsigned long long(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundBuffer {
+namespace fn {
+namespace getDuration {
+    inline constexpr std::string_view id = "getDuration";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Time(void)"
+    };
+}}}}}
+
+
+namespace type {
+namespace sf {
+namespace InputSoundFile {
+    inline constexpr std::string_view id = "sf::InputSoundFile";
+}}}
+
+namespace type {
+namespace sf {
+namespace InputSoundFile {
+namespace fn {
+namespace getChannelCount {
+    inline constexpr std::string_view id = "getChannelCount";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "unsigned int(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace InputSoundFile {
+namespace fn {
+namespace openFromFile {
+    inline constexpr std::string_view id = "openFromFile";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(const std::filesystem::path &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace InputSoundFile {
+namespace fn {
+namespace getSampleRate {
+    inline constexpr std::string_view id = "getSampleRate";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "unsigned int(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace InputSoundFile {
+namespace fn {
+namespace openFromMemory {
+    inline constexpr std::string_view id = "openFromMemory";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(const void *, unsigned long long)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace InputSoundFile {
+namespace fn {
+namespace openFromStream {
+    inline constexpr std::string_view id = "openFromStream";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(sf::InputStream &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace InputSoundFile {
+namespace fn {
+namespace getSampleCount {
+    inline constexpr std::string_view id = "getSampleCount";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "unsigned long long(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace InputSoundFile {
+namespace fn {
+namespace getDuration {
+    inline constexpr std::string_view id = "getDuration";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Time(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace InputSoundFile {
+namespace fn {
+namespace getTimeOffset {
+    inline constexpr std::string_view id = "getTimeOffset";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Time(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace InputSoundFile {
+namespace fn {
+namespace getSampleOffset {
+    inline constexpr std::string_view id = "getSampleOffset";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "unsigned long long(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace InputSoundFile {
+namespace fn {
+namespace seek {
+    inline constexpr std::string_view id = "seek";
+    inline constexpr std::array<std::string_view, 2> signatures = {
+        "void(unsigned long long)",
+        "void(sf::Time)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace InputSoundFile {
+namespace fn {
+namespace read {
+    inline constexpr std::string_view id = "read";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "unsigned long long(short *, unsigned long long)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace InputSoundFile {
+namespace fn {
+namespace close {
+    inline constexpr std::string_view id = "close";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(void)"
+    };
+}}}}}
+
+
+namespace type {
+namespace sf {
+namespace String {
+    inline constexpr std::string_view id = "sf::String";
+}}}
+
+namespace type {
+namespace sf {
+namespace String {
+namespace fn {
+namespace toWideString {
+    inline constexpr std::string_view id = "toWideString";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "std::wstring(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace String {
+namespace fn {
+namespace getSize {
+    inline constexpr std::string_view id = "getSize";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "unsigned long long(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace String {
+namespace fn {
+namespace begin {
+    inline constexpr std::string_view id = "begin";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::String::Iterator(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace String {
+namespace fn {
+namespace toAnsiString {
+    inline constexpr std::string_view id = "toAnsiString";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "std::string(const std::locale &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace String {
+namespace fn {
+namespace replace {
+    inline constexpr std::string_view id = "replace";
+    inline constexpr std::array<std::string_view, 2> signatures = {
+        "void(unsigned long long, unsigned long long, const sf::String &)",
+        "void(const sf::String &, const sf::String &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace String {
+namespace fn {
+namespace toUtf8 {
+    inline constexpr std::string_view id = "toUtf8";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::U8String(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace String {
+namespace fn {
+namespace clear {
+    inline constexpr std::string_view id = "clear";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace String {
+namespace fn {
+namespace toUtf16 {
+    inline constexpr std::string_view id = "toUtf16";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "std::u16string(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace String {
+namespace fn {
+namespace toUtf32 {
+    inline constexpr std::string_view id = "toUtf32";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "std::u32string(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace String {
+namespace fn {
+namespace isEmpty {
+    inline constexpr std::string_view id = "isEmpty";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace String {
+namespace fn {
+namespace erase {
+    inline constexpr std::string_view id = "erase";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(unsigned long long, unsigned long long)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace String {
+namespace fn {
+namespace insert {
+    inline constexpr std::string_view id = "insert";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(unsigned long long, const sf::String &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace String {
+namespace fn {
+namespace find {
+    inline constexpr std::string_view id = "find";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "unsigned long long(const sf::String &, unsigned long long)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace String {
+namespace fn {
+namespace substring {
+    inline constexpr std::string_view id = "substring";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::String(unsigned long long, unsigned long long)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace String {
+namespace fn {
+namespace getData {
+    inline constexpr std::string_view id = "getData";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "const char32_t *(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace String {
+namespace fn {
+namespace end {
+    inline constexpr std::string_view id = "end";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::String::Iterator(void)"
+    };
+}}}}}
+
+
+namespace type {
+namespace sf {
+namespace U8StringCharTraits {
+    inline constexpr std::string_view id = "sf::U8StringCharTraits";
+}}}
+
+namespace type {
+namespace sf {
+namespace U8StringCharTraits {
+namespace fn {
+namespace move {
+    inline constexpr std::string_view id = "move";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::U8StringCharTraits::char_type *(sf::U8StringCharTraits::char_type *, const sf::U8StringCharTraits::char_type *, unsigned long long)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace U8StringCharTraits {
+namespace fn {
+namespace compare {
+    inline constexpr std::string_view id = "compare";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "int(const sf::U8StringCharTraits::char_type *, const sf::U8StringCharTraits::char_type *, unsigned long long)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace U8StringCharTraits {
+namespace fn {
+namespace copy {
+    inline constexpr std::string_view id = "copy";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::U8StringCharTraits::char_type *(sf::U8StringCharTraits::char_type *, const sf::U8StringCharTraits::char_type *, unsigned long long)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace U8StringCharTraits {
+namespace fn {
+namespace assign {
+    inline constexpr std::string_view id = "assign";
+    inline constexpr std::array<std::string_view, 2> signatures = {
+        "void(sf::U8StringCharTraits::char_type &, sf::U8StringCharTraits::char_type)",
+        "sf::U8StringCharTraits::char_type *(sf::U8StringCharTraits::char_type *, unsigned long long, sf::U8StringCharTraits::char_type)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace U8StringCharTraits {
+namespace fn {
+namespace eq {
+    inline constexpr std::string_view id = "eq";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(sf::U8StringCharTraits::char_type, sf::U8StringCharTraits::char_type)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace U8StringCharTraits {
+namespace fn {
+namespace length {
+    inline constexpr std::string_view id = "length";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "unsigned long long(const sf::U8StringCharTraits::char_type *)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace U8StringCharTraits {
+namespace fn {
+namespace lt {
+    inline constexpr std::string_view id = "lt";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(sf::U8StringCharTraits::char_type, sf::U8StringCharTraits::char_type)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace U8StringCharTraits {
+namespace fn {
+namespace find {
+    inline constexpr std::string_view id = "find";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "const sf::U8StringCharTraits::char_type *(const sf::U8StringCharTraits::char_type *, unsigned long long, const sf::U8StringCharTraits::char_type &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace U8StringCharTraits {
+namespace fn {
+namespace to_char_type {
+    inline constexpr std::string_view id = "to_char_type";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::U8StringCharTraits::char_type(int)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace U8StringCharTraits {
+namespace fn {
+namespace not_eof {
+    inline constexpr std::string_view id = "not_eof";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "int(int)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace U8StringCharTraits {
+namespace fn {
+namespace to_int_type {
+    inline constexpr std::string_view id = "to_int_type";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "int(sf::U8StringCharTraits::char_type)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace U8StringCharTraits {
+namespace fn {
+namespace eq_int_type {
+    inline constexpr std::string_view id = "eq_int_type";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(int, int)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace U8StringCharTraits {
+namespace fn {
+namespace eof {
+    inline constexpr std::string_view id = "eof";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "int(void)"
+    };
+}}}}}
+
+
+namespace type {
+namespace sf {
+namespace RenderTexture {
+    inline constexpr std::string_view id = "sf::RenderTexture";
+}}}
+
+namespace type {
+namespace sf {
+namespace RenderTexture {
+namespace fn {
+namespace setRepeated {
+    inline constexpr std::string_view id = "setRepeated";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(bool)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace RenderTexture {
+namespace fn {
+namespace resize {
+    inline constexpr std::string_view id = "resize";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(sf::Vector2u, const sf::ContextSettings &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace RenderTexture {
+namespace fn {
+namespace setSmooth {
+    inline constexpr std::string_view id = "setSmooth";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(bool)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace RenderTexture {
+namespace fn {
+namespace isRepeated {
+    inline constexpr std::string_view id = "isRepeated";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace RenderTexture {
+namespace fn {
+namespace getMaximumAntiAliasingLevel {
+    inline constexpr std::string_view id = "getMaximumAntiAliasingLevel";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "unsigned int(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace RenderTexture {
+namespace fn {
+namespace isSmooth {
+    inline constexpr std::string_view id = "isSmooth";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace RenderTexture {
+namespace fn {
+namespace generateMipmap {
+    inline constexpr std::string_view id = "generateMipmap";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace RenderTexture {
+namespace fn {
+namespace setActive {
+    inline constexpr std::string_view id = "setActive";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(bool)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace RenderTexture {
+namespace fn {
+namespace display {
+    inline constexpr std::string_view id = "display";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace RenderTexture {
+namespace fn {
+namespace getSize {
+    inline constexpr std::string_view id = "getSize";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Vector2u(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace RenderTexture {
+namespace fn {
+namespace isSrgb {
+    inline constexpr std::string_view id = "isSrgb";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace RenderTexture {
+namespace fn {
+namespace getTexture {
+    inline constexpr std::string_view id = "getTexture";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "const sf::Texture &(void)"
+    };
+}}}}}
+
+
+namespace type {
+namespace sf {
+namespace SoundBufferRecorder {
+    inline constexpr std::string_view id = "sf::SoundBufferRecorder";
+}}}
+
+namespace type {
+namespace sf {
+namespace SoundBufferRecorder {
+namespace fn {
+namespace getBuffer {
+    inline constexpr std::string_view id = "getBuffer";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "const sf::SoundBuffer &(void)"
+    };
+}}}}}
+
+
+namespace type {
+namespace sf {
+namespace ConvexShape {
+    inline constexpr std::string_view id = "sf::ConvexShape";
+}}}
+
+namespace type {
+namespace sf {
+namespace ConvexShape {
+namespace fn {
+namespace setPointCount {
+    inline constexpr std::string_view id = "setPointCount";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(unsigned long long)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace ConvexShape {
+namespace fn {
+namespace getPointCount {
+    inline constexpr std::string_view id = "getPointCount";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "unsigned long long(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace ConvexShape {
+namespace fn {
+namespace setPoint {
+    inline constexpr std::string_view id = "setPoint";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(unsigned long long, sf::Vector2f)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace ConvexShape {
+namespace fn {
+namespace getPoint {
+    inline constexpr std::string_view id = "getPoint";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Vector2f(unsigned long long)"
+    };
+}}}}}
+
+
+namespace type {
+namespace sf {
+namespace Music {
+    inline constexpr std::string_view id = "sf::Music";
+}}}
+
+namespace type {
+namespace sf {
+namespace Music {
+namespace fn {
+namespace openFromFile {
+    inline constexpr std::string_view id = "openFromFile";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(const std::filesystem::path &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Music {
+namespace fn {
+namespace setLoopPoints {
+    inline constexpr std::string_view id = "setLoopPoints";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(sf::Music::TimeSpan)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Music {
+namespace fn {
+namespace openFromMemory {
+    inline constexpr std::string_view id = "openFromMemory";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(const void *, unsigned long long)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Music {
+namespace fn {
+namespace getDuration {
+    inline constexpr std::string_view id = "getDuration";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Time(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Music {
+namespace fn {
+namespace getLoopPoints {
+    inline constexpr std::string_view id = "getLoopPoints";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Music::TimeSpan(void)"
+    };
+}}}}}
+
+
+namespace type {
+namespace sf {
+namespace OutputSoundFile {
+    inline constexpr std::string_view id = "sf::OutputSoundFile";
+}}}
+
+namespace type {
+namespace sf {
+namespace OutputSoundFile {
+namespace fn {
+namespace write {
+    inline constexpr std::string_view id = "write";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(const short *, unsigned long long)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace OutputSoundFile {
+namespace fn {
+namespace close {
+    inline constexpr std::string_view id = "close";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(void)"
+    };
+}}}}}
+
+
+namespace type {
+namespace sf {
+namespace Sound {
+    inline constexpr std::string_view id = "sf::Sound";
+}}}
+
+namespace type {
+namespace sf {
+namespace Sound {
+namespace fn {
+namespace getBuffer {
+    inline constexpr std::string_view id = "getBuffer";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "const sf::SoundBuffer &(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Sound {
+namespace fn {
+namespace stop {
+    inline constexpr std::string_view id = "stop";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Sound {
+namespace fn {
+namespace pause {
+    inline constexpr std::string_view id = "pause";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Sound {
+namespace fn {
+namespace play {
+    inline constexpr std::string_view id = "play";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Sound {
+namespace fn {
+namespace setBuffer {
+    inline constexpr std::string_view id = "setBuffer";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(const sf::SoundBuffer &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Sound {
+namespace fn {
+namespace setLooping {
+    inline constexpr std::string_view id = "setLooping";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(bool)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Sound {
+namespace fn {
+namespace setPlayingOffset {
+    inline constexpr std::string_view id = "setPlayingOffset";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(sf::Time)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Sound {
+namespace fn {
+namespace isLooping {
+    inline constexpr std::string_view id = "isLooping";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Sound {
+namespace fn {
+namespace getPlayingOffset {
+    inline constexpr std::string_view id = "getPlayingOffset";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Time(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Sound {
+namespace fn {
+namespace getStatus {
+    inline constexpr std::string_view id = "getStatus";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::SoundSource::Status(void)"
+    };
+}}}}}
+
+
+namespace type {
+namespace sf {
+namespace SoundStream {
+    inline constexpr std::string_view id = "sf::SoundStream";
+}}}
+
+namespace type {
+namespace sf {
+namespace SoundStream {
+namespace fn {
+namespace play {
+    inline constexpr std::string_view id = "play";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundStream {
+namespace fn {
+namespace getChannelCount {
+    inline constexpr std::string_view id = "getChannelCount";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "unsigned int(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundStream {
+namespace fn {
+namespace stop {
+    inline constexpr std::string_view id = "stop";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundStream {
+namespace fn {
+namespace pause {
+    inline constexpr std::string_view id = "pause";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundStream {
+namespace fn {
+namespace getSampleRate {
+    inline constexpr std::string_view id = "getSampleRate";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "unsigned int(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundStream {
+namespace fn {
+namespace getStatus {
+    inline constexpr std::string_view id = "getStatus";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::SoundSource::Status(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundStream {
+namespace fn {
+namespace setPlayingOffset {
+    inline constexpr std::string_view id = "setPlayingOffset";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(sf::Time)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundStream {
+namespace fn {
+namespace getPlayingOffset {
+    inline constexpr std::string_view id = "getPlayingOffset";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Time(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundStream {
+namespace fn {
+namespace setLooping {
+    inline constexpr std::string_view id = "setLooping";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(bool)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundStream {
+namespace fn {
+namespace isLooping {
+    inline constexpr std::string_view id = "isLooping";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(void)"
+    };
+}}}}}
+
+
+namespace type {
+namespace sf {
+namespace Context {
+    inline constexpr std::string_view id = "sf::Context";
+}}}
+
+namespace type {
+namespace sf {
+namespace Context {
+namespace fn {
+namespace getActiveContextId {
+    inline constexpr std::string_view id = "getActiveContextId";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "unsigned long long(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Context {
+namespace fn {
+namespace setActive {
+    inline constexpr std::string_view id = "setActive";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(bool)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Context {
+namespace fn {
+namespace getSettings {
+    inline constexpr std::string_view id = "getSettings";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "const sf::ContextSettings &(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Context {
+namespace fn {
+namespace getActiveContext {
+    inline constexpr std::string_view id = "getActiveContext";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "const sf::Context *(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Context {
+namespace fn {
+namespace isExtensionAvailable {
+    inline constexpr std::string_view id = "isExtensionAvailable";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(std::string_view)"
+    };
+}}}}}
+
+
+namespace type {
+namespace sf {
+namespace SoundRecorder {
+    inline constexpr std::string_view id = "sf::SoundRecorder";
+}}}
+
+namespace type {
+namespace sf {
+namespace SoundRecorder {
+namespace fn {
+namespace getSampleRate {
+    inline constexpr std::string_view id = "getSampleRate";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "unsigned int(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundRecorder {
+namespace fn {
+namespace start {
+    inline constexpr std::string_view id = "start";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(unsigned int)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundRecorder {
+namespace fn {
+namespace getChannelCount {
+    inline constexpr std::string_view id = "getChannelCount";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "unsigned int(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundRecorder {
+namespace fn {
+namespace getDevice {
+    inline constexpr std::string_view id = "getDevice";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "const std::string &(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundRecorder {
+namespace fn {
+namespace stop {
+    inline constexpr std::string_view id = "stop";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundRecorder {
+namespace fn {
+namespace getDefaultDevice {
+    inline constexpr std::string_view id = "getDefaultDevice";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "std::string(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundRecorder {
+namespace fn {
+namespace setChannelCount {
+    inline constexpr std::string_view id = "setChannelCount";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(unsigned int)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundRecorder {
+namespace fn {
+namespace setDevice {
+    inline constexpr std::string_view id = "setDevice";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(const std::string &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundRecorder {
+namespace fn {
+namespace isAvailable {
+    inline constexpr std::string_view id = "isAvailable";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(void)"
+    };
+}}}}}
+
+
+namespace type {
+namespace sf {
+namespace Window {
+    inline constexpr std::string_view id = "sf::Window";
+}}}
+
+namespace type {
+namespace sf {
+namespace Window {
+namespace fn {
+namespace display {
+    inline constexpr std::string_view id = "display";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Window {
+namespace fn {
+namespace setActive {
+    inline constexpr std::string_view id = "setActive";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(bool)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Window {
+namespace fn {
+namespace create {
+    inline constexpr std::string_view id = "create";
+    inline constexpr std::array<std::string_view, 4> signatures = {
+        "void(sf::VideoMode, const sf::String &, unsigned int, sf::State)",
+        "void(sf::VideoMode, const sf::String &, unsigned int, sf::State, const sf::ContextSettings &)",
+        "void(sf::VideoMode, const sf::String &, sf::State)",
+        "void(sf::VideoMode, const sf::String &, sf::State, const sf::ContextSettings &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Window {
+namespace fn {
+namespace close {
+    inline constexpr std::string_view id = "close";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Window {
+namespace fn {
+namespace getSettings {
+    inline constexpr std::string_view id = "getSettings";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "const sf::ContextSettings &(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Window {
+namespace fn {
+namespace setVerticalSyncEnabled {
+    inline constexpr std::string_view id = "setVerticalSyncEnabled";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(bool)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Window {
+namespace fn {
+namespace setFramerateLimit {
+    inline constexpr std::string_view id = "setFramerateLimit";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(unsigned int)"
+    };
+}}}}}
+
+
+namespace type {
+namespace sf {
+namespace SoundSource {
+    inline constexpr std::string_view id = "sf::SoundSource";
+}}}
+
+namespace type {
+namespace sf {
+namespace SoundSource {
+namespace fn {
+namespace setPitch {
+    inline constexpr std::string_view id = "setPitch";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(float)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundSource {
+namespace fn {
+namespace isSpatializationEnabled {
+    inline constexpr std::string_view id = "isSpatializationEnabled";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundSource {
+namespace fn {
+namespace setPan {
+    inline constexpr std::string_view id = "setPan";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(float)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundSource {
+namespace fn {
+namespace setVolume {
+    inline constexpr std::string_view id = "setVolume";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(float)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundSource {
+namespace fn {
+namespace setVelocity {
+    inline constexpr std::string_view id = "setVelocity";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(const sf::Vector3f &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundSource {
+namespace fn {
+namespace setDirectionalAttenuationFactor {
+    inline constexpr std::string_view id = "setDirectionalAttenuationFactor";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(float)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundSource {
+namespace fn {
+namespace setSpatializationEnabled {
+    inline constexpr std::string_view id = "setSpatializationEnabled";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(bool)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundSource {
+namespace fn {
+namespace setCone {
+    inline constexpr std::string_view id = "setCone";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(const sf::SoundSource::Cone &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundSource {
+namespace fn {
+namespace setDirection {
+    inline constexpr std::string_view id = "setDirection";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(const sf::Vector3f &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundSource {
+namespace fn {
+namespace setPosition {
+    inline constexpr std::string_view id = "setPosition";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(const sf::Vector3f &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundSource {
+namespace fn {
+namespace setDopplerFactor {
+    inline constexpr std::string_view id = "setDopplerFactor";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(float)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundSource {
+namespace fn {
+namespace setRelativeToListener {
+    inline constexpr std::string_view id = "setRelativeToListener";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(bool)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundSource {
+namespace fn {
+namespace setMinDistance {
+    inline constexpr std::string_view id = "setMinDistance";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(float)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundSource {
+namespace fn {
+namespace getPosition {
+    inline constexpr std::string_view id = "getPosition";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Vector3f(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundSource {
+namespace fn {
+namespace setMaxGain {
+    inline constexpr std::string_view id = "setMaxGain";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(float)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundSource {
+namespace fn {
+namespace setMaxDistance {
+    inline constexpr std::string_view id = "setMaxDistance";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(float)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundSource {
+namespace fn {
+namespace getDopplerFactor {
+    inline constexpr std::string_view id = "getDopplerFactor";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "float(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundSource {
+namespace fn {
+namespace setMinGain {
+    inline constexpr std::string_view id = "setMinGain";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(float)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundSource {
+namespace fn {
+namespace setAttenuation {
+    inline constexpr std::string_view id = "setAttenuation";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(float)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundSource {
+namespace fn {
+namespace getPitch {
+    inline constexpr std::string_view id = "getPitch";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "float(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundSource {
+namespace fn {
+namespace getPan {
+    inline constexpr std::string_view id = "getPan";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "float(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundSource {
+namespace fn {
+namespace getVolume {
+    inline constexpr std::string_view id = "getVolume";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "float(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundSource {
+namespace fn {
+namespace getCone {
+    inline constexpr std::string_view id = "getCone";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::SoundSource::Cone(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundSource {
+namespace fn {
+namespace getDirection {
+    inline constexpr std::string_view id = "getDirection";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Vector3f(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundSource {
+namespace fn {
+namespace getVelocity {
+    inline constexpr std::string_view id = "getVelocity";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Vector3f(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundSource {
+namespace fn {
+namespace getDirectionalAttenuationFactor {
+    inline constexpr std::string_view id = "getDirectionalAttenuationFactor";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "float(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundSource {
+namespace fn {
+namespace isRelativeToListener {
+    inline constexpr std::string_view id = "isRelativeToListener";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundSource {
+namespace fn {
+namespace getMinDistance {
+    inline constexpr std::string_view id = "getMinDistance";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "float(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundSource {
+namespace fn {
+namespace getMaxDistance {
+    inline constexpr std::string_view id = "getMaxDistance";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "float(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundSource {
+namespace fn {
+namespace getMinGain {
+    inline constexpr std::string_view id = "getMinGain";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "float(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundSource {
+namespace fn {
+namespace getMaxGain {
+    inline constexpr std::string_view id = "getMaxGain";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "float(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SoundSource {
+namespace fn {
+namespace getAttenuation {
+    inline constexpr std::string_view id = "getAttenuation";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "float(void)"
+    };
+}}}}}
+
+
+namespace type {
+namespace sf {
+namespace RectangleShape {
+    inline constexpr std::string_view id = "sf::RectangleShape";
+}}}
+
+namespace type {
+namespace sf {
+namespace RectangleShape {
+namespace fn {
+namespace getGeometricCenter {
+    inline constexpr std::string_view id = "getGeometricCenter";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Vector2f(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace RectangleShape {
+namespace fn {
+namespace setSize {
+    inline constexpr std::string_view id = "setSize";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(sf::Vector2f)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace RectangleShape {
+namespace fn {
+namespace getPointCount {
+    inline constexpr std::string_view id = "getPointCount";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "unsigned long long(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace RectangleShape {
+namespace fn {
+namespace getSize {
+    inline constexpr std::string_view id = "getSize";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Vector2f(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace RectangleShape {
+namespace fn {
+namespace getPoint {
+    inline constexpr std::string_view id = "getPoint";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Vector2f(unsigned long long)"
+    };
+}}}}}
+
+
+namespace type {
+namespace sf {
+namespace BlendMode {
+    inline constexpr std::string_view id = "sf::BlendMode";
+}}}
+
+
+namespace type {
+namespace sf {
+namespace CircleShape {
+    inline constexpr std::string_view id = "sf::CircleShape";
+}}}
+
+namespace type {
+namespace sf {
+namespace CircleShape {
+namespace fn {
+namespace getGeometricCenter {
+    inline constexpr std::string_view id = "getGeometricCenter";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Vector2f(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace CircleShape {
+namespace fn {
+namespace getRadius {
+    inline constexpr std::string_view id = "getRadius";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "float(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace CircleShape {
+namespace fn {
+namespace setRadius {
+    inline constexpr std::string_view id = "setRadius";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(float)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace CircleShape {
+namespace fn {
+namespace setPointCount {
+    inline constexpr std::string_view id = "setPointCount";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(unsigned long long)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace CircleShape {
+namespace fn {
+namespace getPointCount {
+    inline constexpr std::string_view id = "getPointCount";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "unsigned long long(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace CircleShape {
+namespace fn {
+namespace getPoint {
+    inline constexpr std::string_view id = "getPoint";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Vector2f(unsigned long long)"
+    };
+}}}}}
+
+
+namespace type {
+namespace sf {
+namespace Font {
+    inline constexpr std::string_view id = "sf::Font";
+}}}
+
+namespace type {
+namespace sf {
+namespace Font {
+namespace fn {
+namespace getGlyph {
+    inline constexpr std::string_view id = "getGlyph";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "const sf::Glyph &(char32_t, unsigned int, bool, float)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Font {
+namespace fn {
+namespace openFromFile {
+    inline constexpr std::string_view id = "openFromFile";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(const std::filesystem::path &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Font {
+namespace fn {
+namespace openFromMemory {
+    inline constexpr std::string_view id = "openFromMemory";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(const void *, unsigned long long)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Font {
+namespace fn {
+namespace getKerning {
+    inline constexpr std::string_view id = "getKerning";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "float(unsigned int, unsigned int, unsigned int, bool)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Font {
+namespace fn {
+namespace getUnderlineThickness {
+    inline constexpr std::string_view id = "getUnderlineThickness";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "float(unsigned int)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Font {
+namespace fn {
+namespace openFromStream {
+    inline constexpr std::string_view id = "openFromStream";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(sf::InputStream &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Font {
+namespace fn {
+namespace hasGlyph {
+    inline constexpr std::string_view id = "hasGlyph";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(char32_t)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Font {
+namespace fn {
+namespace getInfo {
+    inline constexpr std::string_view id = "getInfo";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "const sf::Font::Info &(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Font {
+namespace fn {
+namespace getUnderlinePosition {
+    inline constexpr std::string_view id = "getUnderlinePosition";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "float(unsigned int)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Font {
+namespace fn {
+namespace getLineSpacing {
+    inline constexpr std::string_view id = "getLineSpacing";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "float(unsigned int)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Font {
+namespace fn {
+namespace getTexture {
+    inline constexpr std::string_view id = "getTexture";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "const sf::Texture &(unsigned int)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Font {
+namespace fn {
+namespace setSmooth {
+    inline constexpr std::string_view id = "setSmooth";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(bool)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Font {
+namespace fn {
+namespace isSmooth {
+    inline constexpr std::string_view id = "isSmooth";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(void)"
+    };
+}}}}}
+
+
+namespace type {
+namespace sf {
+namespace Image {
+    inline constexpr std::string_view id = "sf::Image";
+}}}
+
+namespace type {
+namespace sf {
+namespace Image {
+namespace fn {
+namespace loadFromStream {
+    inline constexpr std::string_view id = "loadFromStream";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(sf::InputStream &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Image {
+namespace fn {
+namespace resize {
+    inline constexpr std::string_view id = "resize";
+    inline constexpr std::array<std::string_view, 2> signatures = {
+        "void(sf::Vector2u, sf::Color)",
+        "void(sf::Vector2u, const unsigned char *)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Image {
+namespace fn {
+namespace loadFromFile {
+    inline constexpr std::string_view id = "loadFromFile";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(const std::filesystem::path &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Image {
+namespace fn {
+namespace saveToFile {
+    inline constexpr std::string_view id = "saveToFile";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(const std::filesystem::path &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Image {
+namespace fn {
+namespace loadFromMemory {
+    inline constexpr std::string_view id = "loadFromMemory";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(const void *, unsigned long long)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Image {
+namespace fn {
+namespace getSize {
+    inline constexpr std::string_view id = "getSize";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Vector2u(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Image {
+namespace fn {
+namespace createMaskFromColor {
+    inline constexpr std::string_view id = "createMaskFromColor";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(sf::Color, unsigned char)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Image {
+namespace fn {
+namespace copy {
+    inline constexpr std::string_view id = "copy";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(const sf::Image &, sf::Vector2u, const sf::IntRect &, bool)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Image {
+namespace fn {
+namespace flipHorizontally {
+    inline constexpr std::string_view id = "flipHorizontally";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Image {
+namespace fn {
+namespace setPixel {
+    inline constexpr std::string_view id = "setPixel";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(sf::Vector2u, sf::Color)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Image {
+namespace fn {
+namespace getPixel {
+    inline constexpr std::string_view id = "getPixel";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Color(sf::Vector2u)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Image {
+namespace fn {
+namespace getPixelsPtr {
+    inline constexpr std::string_view id = "getPixelsPtr";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "const unsigned char *(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Image {
+namespace fn {
+namespace flipVertically {
+    inline constexpr std::string_view id = "flipVertically";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(void)"
+    };
+}}}}}
+
+
+namespace type {
+namespace sf {
+namespace RenderStates {
+    inline constexpr std::string_view id = "sf::RenderStates";
+}}}
+
+
+namespace type {
+namespace sf {
+namespace RenderTarget {
+    inline constexpr std::string_view id = "sf::RenderTarget";
+}}}
+
+namespace type {
+namespace sf {
+namespace RenderTarget {
+namespace fn {
+namespace getView {
+    inline constexpr std::string_view id = "getView";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "const sf::View &(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace RenderTarget {
+namespace fn {
+namespace mapCoordsToPixel {
+    inline constexpr std::string_view id = "mapCoordsToPixel";
+    inline constexpr std::array<std::string_view, 2> signatures = {
+        "sf::Vector2i(sf::Vector2f)",
+        "sf::Vector2i(sf::Vector2f, const sf::View &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace RenderTarget {
+namespace fn {
+namespace clear {
+    inline constexpr std::string_view id = "clear";
+    inline constexpr std::array<std::string_view, 2> signatures = {
+        "void(sf::Color)",
+        "void(sf::Color, sf::StencilValue)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace RenderTarget {
+namespace fn {
+namespace setView {
+    inline constexpr std::string_view id = "setView";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(const sf::View &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace RenderTarget {
+namespace fn {
+namespace clearStencil {
+    inline constexpr std::string_view id = "clearStencil";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(sf::StencilValue)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace RenderTarget {
+namespace fn {
+namespace getDefaultView {
+    inline constexpr std::string_view id = "getDefaultView";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "const sf::View &(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace RenderTarget {
+namespace fn {
+namespace popGLStates {
+    inline constexpr std::string_view id = "popGLStates";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace RenderTarget {
+namespace fn {
+namespace getViewport {
+    inline constexpr std::string_view id = "getViewport";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::IntRect(const sf::View &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace RenderTarget {
+namespace fn {
+namespace getScissor {
+    inline constexpr std::string_view id = "getScissor";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::IntRect(const sf::View &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace RenderTarget {
+namespace fn {
+namespace mapPixelToCoords {
+    inline constexpr std::string_view id = "mapPixelToCoords";
+    inline constexpr std::array<std::string_view, 2> signatures = {
+        "sf::Vector2f(sf::Vector2i)",
+        "sf::Vector2f(sf::Vector2i, const sf::View &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace RenderTarget {
+namespace fn {
+namespace draw {
+    inline constexpr std::string_view id = "draw";
+    inline constexpr std::array<std::string_view, 4> signatures = {
+        "void(const sf::Drawable &, const sf::RenderStates &)",
+        "void(const sf::Vertex *, unsigned long long, sf::PrimitiveType, const sf::RenderStates &)",
+        "void(const sf::VertexBuffer &, const sf::RenderStates &)",
+        "void(const sf::VertexBuffer &, unsigned long long, unsigned long long, const sf::RenderStates &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace RenderTarget {
+namespace fn {
+namespace isSrgb {
+    inline constexpr std::string_view id = "isSrgb";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace RenderTarget {
+namespace fn {
+namespace setActive {
+    inline constexpr std::string_view id = "setActive";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(bool)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace RenderTarget {
+namespace fn {
+namespace pushGLStates {
+    inline constexpr std::string_view id = "pushGLStates";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace RenderTarget {
+namespace fn {
+namespace resetGLStates {
+    inline constexpr std::string_view id = "resetGLStates";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(void)"
+    };
+}}}}}
+
+
+namespace type {
+namespace sf {
+namespace RenderWindow {
+    inline constexpr std::string_view id = "sf::RenderWindow";
+}}}
+
+namespace type {
+namespace sf {
+namespace RenderWindow {
+namespace fn {
+namespace setActive {
+    inline constexpr std::string_view id = "setActive";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(bool)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace RenderWindow {
+namespace fn {
+namespace isSrgb {
+    inline constexpr std::string_view id = "isSrgb";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace RenderWindow {
+namespace fn {
+namespace getSize {
+    inline constexpr std::string_view id = "getSize";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Vector2u(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace RenderWindow {
+namespace fn {
+namespace setIcon {
+    inline constexpr std::string_view id = "setIcon";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(const sf::Image &)"
+    };
+}}}}}
+
+
+namespace type {
+namespace sf {
+namespace Shader {
+    inline constexpr std::string_view id = "sf::Shader";
+}}}
+
+namespace type {
+namespace sf {
+namespace Shader {
+namespace fn {
+namespace setUniform {
+    inline constexpr std::string_view id = "setUniform";
+    inline constexpr std::array<std::string_view, 16> signatures = {
+        "void(const std::string &, float)",
+        "void(const std::string &, sf::Glsl::Vec2)",
+        "void(const std::string &, const sf::Glsl::Vec3 &)",
+        "void(const std::string &, const sf::Glsl::Vec4 &)",
+        "void(const std::string &, int)",
+        "void(const std::string &, sf::Glsl::Ivec2)",
+        "void(const std::string &, const sf::Glsl::Ivec3 &)",
+        "void(const std::string &, const sf::Glsl::Ivec4 &)",
+        "void(const std::string &, bool)",
+        "void(const std::string &, sf::Glsl::Bvec2)",
+        "void(const std::string &, const sf::Glsl::Bvec3 &)",
+        "void(const std::string &, const sf::Glsl::Bvec4 &)",
+        "void(const std::string &, const sf::Glsl::Mat3 &)",
+        "void(const std::string &, const sf::Glsl::Mat4 &)",
+        "void(const std::string &, const sf::Texture &)",
+        "void(const std::string &, sf::Shader::CurrentTextureType)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Shader {
+namespace fn {
+namespace loadFromFile {
+    inline constexpr std::string_view id = "loadFromFile";
+    inline constexpr std::array<std::string_view, 3> signatures = {
+        "bool(const std::filesystem::path &, sf::Shader::Type)",
+        "bool(const std::filesystem::path &, const std::filesystem::path &)",
+        "bool(const std::filesystem::path &, const std::filesystem::path &, const std::filesystem::path &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Shader {
+namespace fn {
+namespace getNativeHandle {
+    inline constexpr std::string_view id = "getNativeHandle";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "unsigned int(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Shader {
+namespace fn {
+namespace loadFromMemory {
+    inline constexpr std::string_view id = "loadFromMemory";
+    inline constexpr std::array<std::string_view, 3> signatures = {
+        "bool(std::string_view, sf::Shader::Type)",
+        "bool(std::string_view, std::string_view)",
+        "bool(std::string_view, std::string_view, std::string_view)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Shader {
+namespace fn {
+namespace loadFromStream {
+    inline constexpr std::string_view id = "loadFromStream";
+    inline constexpr std::array<std::string_view, 3> signatures = {
+        "bool(sf::InputStream &, sf::Shader::Type)",
+        "bool(sf::InputStream &, sf::InputStream &)",
+        "bool(sf::InputStream &, sf::InputStream &, sf::InputStream &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Shader {
+namespace fn {
+namespace bind {
+    inline constexpr std::string_view id = "bind";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(const sf::Shader *)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Shader {
+namespace fn {
+namespace setUniformArray {
+    inline constexpr std::string_view id = "setUniformArray";
+    inline constexpr std::array<std::string_view, 6> signatures = {
+        "void(const std::string &, const float *, unsigned long long)",
+        "void(const std::string &, const sf::Glsl::Vec2 *, unsigned long long)",
+        "void(const std::string &, const sf::Glsl::Vec3 *, unsigned long long)",
+        "void(const std::string &, const sf::Glsl::Vec4 *, unsigned long long)",
+        "void(const std::string &, const sf::Glsl::Mat3 *, unsigned long long)",
+        "void(const std::string &, const sf::Glsl::Mat4 *, unsigned long long)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Shader {
+namespace fn {
+namespace isAvailable {
+    inline constexpr std::string_view id = "isAvailable";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Shader {
+namespace fn {
+namespace isGeometryAvailable {
+    inline constexpr std::string_view id = "isGeometryAvailable";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(void)"
+    };
+}}}}}
+
+
+namespace type {
+namespace sf {
+namespace Shape {
+    inline constexpr std::string_view id = "sf::Shape";
+}}}
+
+namespace type {
+namespace sf {
+namespace Shape {
+namespace fn {
+namespace getOutlineColor {
+    inline constexpr std::string_view id = "getOutlineColor";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Color(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Shape {
+namespace fn {
+namespace setTexture {
+    inline constexpr std::string_view id = "setTexture";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(const sf::Texture *, bool)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Shape {
+namespace fn {
+namespace setOutlineColor {
+    inline constexpr std::string_view id = "setOutlineColor";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(sf::Color)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Shape {
+namespace fn {
+namespace getTexture {
+    inline constexpr std::string_view id = "getTexture";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "const sf::Texture *(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Shape {
+namespace fn {
+namespace setTextureRect {
+    inline constexpr std::string_view id = "setTextureRect";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(const sf::IntRect &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Shape {
+namespace fn {
+namespace getTextureRect {
+    inline constexpr std::string_view id = "getTextureRect";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "const sf::IntRect &(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Shape {
+namespace fn {
+namespace setFillColor {
+    inline constexpr std::string_view id = "setFillColor";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(sf::Color)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Shape {
+namespace fn {
+namespace getFillColor {
+    inline constexpr std::string_view id = "getFillColor";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Color(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Shape {
+namespace fn {
+namespace setOutlineThickness {
+    inline constexpr std::string_view id = "setOutlineThickness";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(float)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Shape {
+namespace fn {
+namespace getOutlineThickness {
+    inline constexpr std::string_view id = "getOutlineThickness";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "float(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Shape {
+namespace fn {
+namespace getGeometricCenter {
+    inline constexpr std::string_view id = "getGeometricCenter";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Vector2f(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Shape {
+namespace fn {
+namespace getLocalBounds {
+    inline constexpr std::string_view id = "getLocalBounds";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::FloatRect(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Shape {
+namespace fn {
+namespace getGlobalBounds {
+    inline constexpr std::string_view id = "getGlobalBounds";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::FloatRect(void)"
+    };
+}}}}}
+
+
+namespace type {
+namespace sf {
+namespace VertexArray {
+    inline constexpr std::string_view id = "sf::VertexArray";
+}}}
+
+namespace type {
+namespace sf {
+namespace VertexArray {
+namespace fn {
+namespace setPrimitiveType {
+    inline constexpr std::string_view id = "setPrimitiveType";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(sf::PrimitiveType)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace VertexArray {
+namespace fn {
+namespace getVertexCount {
+    inline constexpr std::string_view id = "getVertexCount";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "unsigned long long(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace VertexArray {
+namespace fn {
+namespace getBounds {
+    inline constexpr std::string_view id = "getBounds";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::FloatRect(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace VertexArray {
+namespace fn {
+namespace clear {
+    inline constexpr std::string_view id = "clear";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace VertexArray {
+namespace fn {
+namespace append {
+    inline constexpr std::string_view id = "append";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(const sf::Vertex &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace VertexArray {
+namespace fn {
+namespace resize {
+    inline constexpr std::string_view id = "resize";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(unsigned long long)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace VertexArray {
+namespace fn {
+namespace getPrimitiveType {
+    inline constexpr std::string_view id = "getPrimitiveType";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::PrimitiveType(void)"
+    };
+}}}}}
+
+
+namespace type {
+namespace sf {
+namespace Sprite {
+    inline constexpr std::string_view id = "sf::Sprite";
+}}}
+
+namespace type {
+namespace sf {
+namespace Sprite {
+namespace fn {
+namespace setColor {
+    inline constexpr std::string_view id = "setColor";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(sf::Color)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Sprite {
+namespace fn {
+namespace setTexture {
+    inline constexpr std::string_view id = "setTexture";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(const sf::Texture &, bool)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Sprite {
+namespace fn {
+namespace setTextureRect {
+    inline constexpr std::string_view id = "setTextureRect";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(const sf::IntRect &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Sprite {
+namespace fn {
+namespace getColor {
+    inline constexpr std::string_view id = "getColor";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Color(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Sprite {
+namespace fn {
+namespace getTexture {
+    inline constexpr std::string_view id = "getTexture";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "const sf::Texture &(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Sprite {
+namespace fn {
+namespace getTextureRect {
+    inline constexpr std::string_view id = "getTextureRect";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "const sf::IntRect &(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Sprite {
+namespace fn {
+namespace getLocalBounds {
+    inline constexpr std::string_view id = "getLocalBounds";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::FloatRect(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Sprite {
+namespace fn {
+namespace getGlobalBounds {
+    inline constexpr std::string_view id = "getGlobalBounds";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::FloatRect(void)"
+    };
+}}}}}
+
+
+namespace type {
+namespace sf {
+namespace StencilValue {
+    inline constexpr std::string_view id = "sf::StencilValue";
+}}}
+
+
+namespace type {
+namespace sf {
+namespace Text {
+    inline constexpr std::string_view id = "sf::Text";
+}}}
+
+namespace type {
+namespace sf {
+namespace Text {
+namespace fn {
+namespace setFillColor {
+    inline constexpr std::string_view id = "setFillColor";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(sf::Color)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Text {
+namespace fn {
+namespace setOutlineColor {
+    inline constexpr std::string_view id = "setOutlineColor";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(sf::Color)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Text {
+namespace fn {
+namespace setString {
+    inline constexpr std::string_view id = "setString";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(const sf::String &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Text {
+namespace fn {
+namespace setFont {
+    inline constexpr std::string_view id = "setFont";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(const sf::Font &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Text {
+namespace fn {
+namespace setLineSpacing {
+    inline constexpr std::string_view id = "setLineSpacing";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(float)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Text {
+namespace fn {
+namespace getOutlineThickness {
+    inline constexpr std::string_view id = "getOutlineThickness";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "float(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Text {
+namespace fn {
+namespace setCharacterSize {
+    inline constexpr std::string_view id = "setCharacterSize";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(unsigned int)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Text {
+namespace fn {
+namespace setLetterSpacing {
+    inline constexpr std::string_view id = "setLetterSpacing";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(float)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Text {
+namespace fn {
+namespace setStyle {
+    inline constexpr std::string_view id = "setStyle";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(unsigned int)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Text {
+namespace fn {
+namespace setOutlineThickness {
+    inline constexpr std::string_view id = "setOutlineThickness";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(float)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Text {
+namespace fn {
+namespace getString {
+    inline constexpr std::string_view id = "getString";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "const sf::String &(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Text {
+namespace fn {
+namespace getLineSpacing {
+    inline constexpr std::string_view id = "getLineSpacing";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "float(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Text {
+namespace fn {
+namespace getFont {
+    inline constexpr std::string_view id = "getFont";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "const sf::Font &(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Text {
+namespace fn {
+namespace getCharacterSize {
+    inline constexpr std::string_view id = "getCharacterSize";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "unsigned int(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Text {
+namespace fn {
+namespace getLetterSpacing {
+    inline constexpr std::string_view id = "getLetterSpacing";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "float(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Text {
+namespace fn {
+namespace getStyle {
+    inline constexpr std::string_view id = "getStyle";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "unsigned int(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Text {
+namespace fn {
+namespace getFillColor {
+    inline constexpr std::string_view id = "getFillColor";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Color(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Text {
+namespace fn {
+namespace getOutlineColor {
+    inline constexpr std::string_view id = "getOutlineColor";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Color(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Text {
+namespace fn {
+namespace findCharacterPos {
+    inline constexpr std::string_view id = "findCharacterPos";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Vector2f(unsigned long long)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Text {
+namespace fn {
+namespace getLocalBounds {
+    inline constexpr std::string_view id = "getLocalBounds";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::FloatRect(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Text {
+namespace fn {
+namespace getGlobalBounds {
+    inline constexpr std::string_view id = "getGlobalBounds";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::FloatRect(void)"
+    };
+}}}}}
+
+
+namespace type {
+namespace sf {
+namespace Texture {
+    inline constexpr std::string_view id = "sf::Texture";
+}}}
+
+namespace type {
+namespace sf {
+namespace Texture {
+namespace fn {
+namespace setRepeated {
+    inline constexpr std::string_view id = "setRepeated";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(bool)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Texture {
+namespace fn {
+namespace setSmooth {
+    inline constexpr std::string_view id = "setSmooth";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(bool)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Texture {
+namespace fn {
+namespace resize {
+    inline constexpr std::string_view id = "resize";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(sf::Vector2u, bool)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Texture {
+namespace fn {
+namespace loadFromFile {
+    inline constexpr std::string_view id = "loadFromFile";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(const std::filesystem::path &, bool, const sf::IntRect &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Texture {
+namespace fn {
+namespace copyToImage {
+    inline constexpr std::string_view id = "copyToImage";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Image(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Texture {
+namespace fn {
+namespace loadFromMemory {
+    inline constexpr std::string_view id = "loadFromMemory";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(const void *, unsigned long long, bool, const sf::IntRect &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Texture {
+namespace fn {
+namespace bind {
+    inline constexpr std::string_view id = "bind";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(const sf::Texture *, sf::CoordinateType)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Texture {
+namespace fn {
+namespace getSize {
+    inline constexpr std::string_view id = "getSize";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Vector2u(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Texture {
+namespace fn {
+namespace loadFromImage {
+    inline constexpr std::string_view id = "loadFromImage";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(const sf::Image &, bool, const sf::IntRect &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Texture {
+namespace fn {
+namespace update {
+    inline constexpr std::string_view id = "update";
+    inline constexpr std::array<std::string_view, 8> signatures = {
+        "void(const unsigned char *)",
+        "void(const unsigned char *, sf::Vector2u, sf::Vector2u)",
+        "void(const sf::Texture &)",
+        "void(const sf::Texture &, sf::Vector2u)",
+        "void(const sf::Image &)",
+        "void(const sf::Image &, sf::Vector2u)",
+        "void(const sf::Window &)",
+        "void(const sf::Window &, sf::Vector2u)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Texture {
+namespace fn {
+namespace isSmooth {
+    inline constexpr std::string_view id = "isSmooth";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Texture {
+namespace fn {
+namespace isSrgb {
+    inline constexpr std::string_view id = "isSrgb";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Texture {
+namespace fn {
+namespace isRepeated {
+    inline constexpr std::string_view id = "isRepeated";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Texture {
+namespace fn {
+namespace generateMipmap {
+    inline constexpr std::string_view id = "generateMipmap";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Texture {
+namespace fn {
+namespace getMaximumSize {
+    inline constexpr std::string_view id = "getMaximumSize";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "unsigned int(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Texture {
+namespace fn {
+namespace swap {
+    inline constexpr std::string_view id = "swap";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(sf::Texture &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Texture {
+namespace fn {
+namespace getNativeHandle {
+    inline constexpr std::string_view id = "getNativeHandle";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "unsigned int(void)"
+    };
+}}}}}
+
+
+namespace type {
+namespace sf {
+namespace Transform {
+    inline constexpr std::string_view id = "sf::Transform";
+}}}
+
+namespace type {
+namespace sf {
+namespace Transform {
+namespace fn {
+namespace rotate {
+    inline constexpr std::string_view id = "rotate";
+    inline constexpr std::array<std::string_view, 2> signatures = {
+        "sf::Transform &(sf::Angle)",
+        "sf::Transform &(sf::Angle, sf::Vector2f)"
+    };
+}}}}}
+
+
+namespace type {
+namespace sf {
+namespace IpAddress {
+    inline constexpr std::string_view id = "sf::IpAddress";
+}}}
+
+namespace type {
+namespace sf {
+namespace IpAddress {
+namespace fn {
+namespace toString {
+    inline constexpr std::string_view id = "toString";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "std::string(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace IpAddress {
+namespace fn {
+namespace toInteger {
+    inline constexpr std::string_view id = "toInteger";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "unsigned int(void)"
+    };
+}}}}}
+
+
+namespace type {
+namespace sf {
+namespace Transformable {
+    inline constexpr std::string_view id = "sf::Transformable";
+}}}
+
+namespace type {
+namespace sf {
+namespace Transformable {
+namespace fn {
+namespace setPosition {
+    inline constexpr std::string_view id = "setPosition";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(sf::Vector2f)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Transformable {
+namespace fn {
+namespace setOrigin {
+    inline constexpr std::string_view id = "setOrigin";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(sf::Vector2f)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Transformable {
+namespace fn {
+namespace setRotation {
+    inline constexpr std::string_view id = "setRotation";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(sf::Angle)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Transformable {
+namespace fn {
+namespace setScale {
+    inline constexpr std::string_view id = "setScale";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(sf::Vector2f)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Transformable {
+namespace fn {
+namespace getPosition {
+    inline constexpr std::string_view id = "getPosition";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Vector2f(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Transformable {
+namespace fn {
+namespace getOrigin {
+    inline constexpr std::string_view id = "getOrigin";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Vector2f(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Transformable {
+namespace fn {
+namespace getRotation {
+    inline constexpr std::string_view id = "getRotation";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Angle(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Transformable {
+namespace fn {
+namespace getScale {
+    inline constexpr std::string_view id = "getScale";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Vector2f(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Transformable {
+namespace fn {
+namespace move {
+    inline constexpr std::string_view id = "move";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(sf::Vector2f)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Transformable {
+namespace fn {
+namespace rotate {
+    inline constexpr std::string_view id = "rotate";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(sf::Angle)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Transformable {
+namespace fn {
+namespace scale {
+    inline constexpr std::string_view id = "scale";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(sf::Vector2f)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Transformable {
+namespace fn {
+namespace getTransform {
+    inline constexpr std::string_view id = "getTransform";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "const sf::Transform &(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Transformable {
+namespace fn {
+namespace getInverseTransform {
+    inline constexpr std::string_view id = "getInverseTransform";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "const sf::Transform &(void)"
+    };
+}}}}}
+
+
+namespace type {
+namespace sf {
+namespace VertexBuffer {
+    inline constexpr std::string_view id = "sf::VertexBuffer";
+}}}
+
+namespace type {
+namespace sf {
+namespace VertexBuffer {
+namespace fn {
+namespace create {
+    inline constexpr std::string_view id = "create";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(unsigned long long)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace VertexBuffer {
+namespace fn {
+namespace setPrimitiveType {
+    inline constexpr std::string_view id = "setPrimitiveType";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(sf::PrimitiveType)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace VertexBuffer {
+namespace fn {
+namespace getVertexCount {
+    inline constexpr std::string_view id = "getVertexCount";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "unsigned long long(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace VertexBuffer {
+namespace fn {
+namespace update {
+    inline constexpr std::string_view id = "update";
+    inline constexpr std::array<std::string_view, 3> signatures = {
+        "bool(const sf::Vertex *)",
+        "bool(const sf::Vertex *, unsigned long long, unsigned int)",
+        "bool(const sf::VertexBuffer &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace VertexBuffer {
+namespace fn {
+namespace bind {
+    inline constexpr std::string_view id = "bind";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(const sf::VertexBuffer *)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace VertexBuffer {
+namespace fn {
+namespace swap {
+    inline constexpr std::string_view id = "swap";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(sf::VertexBuffer &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace VertexBuffer {
+namespace fn {
+namespace getNativeHandle {
+    inline constexpr std::string_view id = "getNativeHandle";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "unsigned int(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace VertexBuffer {
+namespace fn {
+namespace getPrimitiveType {
+    inline constexpr std::string_view id = "getPrimitiveType";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::PrimitiveType(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace VertexBuffer {
+namespace fn {
+namespace setUsage {
+    inline constexpr std::string_view id = "setUsage";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(sf::VertexBuffer::Usage)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace VertexBuffer {
+namespace fn {
+namespace getUsage {
+    inline constexpr std::string_view id = "getUsage";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::VertexBuffer::Usage(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace VertexBuffer {
+namespace fn {
+namespace isAvailable {
+    inline constexpr std::string_view id = "isAvailable";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(void)"
+    };
+}}}}}
+
+
+namespace type {
+namespace sf {
+namespace SocketSelector {
+    inline constexpr std::string_view id = "sf::SocketSelector";
+}}}
+
+namespace type {
+namespace sf {
+namespace SocketSelector {
+namespace fn {
+namespace isReady {
+    inline constexpr std::string_view id = "isReady";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(sf::Socket &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SocketSelector {
+namespace fn {
+namespace add {
+    inline constexpr std::string_view id = "add";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(sf::Socket &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SocketSelector {
+namespace fn {
+namespace remove {
+    inline constexpr std::string_view id = "remove";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(sf::Socket &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SocketSelector {
+namespace fn {
+namespace clear {
+    inline constexpr std::string_view id = "clear";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace SocketSelector {
+namespace fn {
+namespace wait {
+    inline constexpr std::string_view id = "wait";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(sf::Time)"
+    };
+}}}}}
+
+
+namespace type {
+namespace sf {
+namespace Packet {
+    inline constexpr std::string_view id = "sf::Packet";
+}}}
+
+namespace type {
+namespace sf {
+namespace Packet {
+namespace fn {
+namespace append {
+    inline constexpr std::string_view id = "append";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(const void *, unsigned long long)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Packet {
+namespace fn {
+namespace getReadPosition {
+    inline constexpr std::string_view id = "getReadPosition";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "unsigned long long(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Packet {
+namespace fn {
+namespace clear {
+    inline constexpr std::string_view id = "clear";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Packet {
+namespace fn {
+namespace endOfPacket {
+    inline constexpr std::string_view id = "endOfPacket";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Packet {
+namespace fn {
+namespace getData {
+    inline constexpr std::string_view id = "getData";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "const void *(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Packet {
+namespace fn {
+namespace getDataSize {
+    inline constexpr std::string_view id = "getDataSize";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "unsigned long long(void)"
+    };
+}}}}}
+
+
+namespace type {
+namespace sf {
+namespace View {
+    inline constexpr std::string_view id = "sf::View";
+}}}
+
+namespace type {
+namespace sf {
+namespace View {
+namespace fn {
+namespace setRotation {
+    inline constexpr std::string_view id = "setRotation";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(sf::Angle)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace View {
+namespace fn {
+namespace getSize {
+    inline constexpr std::string_view id = "getSize";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Vector2f(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace View {
+namespace fn {
+namespace setCenter {
+    inline constexpr std::string_view id = "setCenter";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(sf::Vector2f)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace View {
+namespace fn {
+namespace getCenter {
+    inline constexpr std::string_view id = "getCenter";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Vector2f(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace View {
+namespace fn {
+namespace setSize {
+    inline constexpr std::string_view id = "setSize";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(sf::Vector2f)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace View {
+namespace fn {
+namespace setViewport {
+    inline constexpr std::string_view id = "setViewport";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(const sf::FloatRect &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace View {
+namespace fn {
+namespace setScissor {
+    inline constexpr std::string_view id = "setScissor";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(const sf::FloatRect &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace View {
+namespace fn {
+namespace getRotation {
+    inline constexpr std::string_view id = "getRotation";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Angle(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace View {
+namespace fn {
+namespace getViewport {
+    inline constexpr std::string_view id = "getViewport";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "const sf::FloatRect &(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace View {
+namespace fn {
+namespace getInverseTransform {
+    inline constexpr std::string_view id = "getInverseTransform";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "const sf::Transform &(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace View {
+namespace fn {
+namespace getScissor {
+    inline constexpr std::string_view id = "getScissor";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "const sf::FloatRect &(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace View {
+namespace fn {
+namespace move {
+    inline constexpr std::string_view id = "move";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(sf::Vector2f)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace View {
+namespace fn {
+namespace rotate {
+    inline constexpr std::string_view id = "rotate";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(sf::Angle)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace View {
+namespace fn {
+namespace zoom {
+    inline constexpr std::string_view id = "zoom";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(float)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace View {
+namespace fn {
+namespace getTransform {
+    inline constexpr std::string_view id = "getTransform";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "const sf::Transform &(void)"
+    };
+}}}}}
+
+
+namespace type {
+namespace sf {
+namespace VideoMode {
+    inline constexpr std::string_view id = "sf::VideoMode";
+}}}
+
+namespace type {
+namespace sf {
+namespace VideoMode {
+namespace fn {
+namespace getDesktopMode {
+    inline constexpr std::string_view id = "getDesktopMode";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::VideoMode(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace VideoMode {
+namespace fn {
+namespace isValid {
+    inline constexpr std::string_view id = "isValid";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(void)"
+    };
+}}}}}
+
 
 namespace type {
 namespace sf {
@@ -483,6 +4450,179 @@ namespace getDirectory {
         "const std::filesystem::path &(void)"
     };
 }}}}}}
+
+
+namespace type {
+namespace sf {
+namespace Ftp {
+    inline constexpr std::string_view id = "sf::Ftp";
+}}}
+
+namespace type {
+namespace sf {
+namespace Ftp {
+namespace fn {
+namespace keepAlive {
+    inline constexpr std::string_view id = "keepAlive";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Ftp::Response(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Ftp {
+namespace fn {
+namespace connect {
+    inline constexpr std::string_view id = "connect";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Ftp::Response(sf::IpAddress, unsigned short, sf::Time)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Ftp {
+namespace fn {
+namespace login {
+    inline constexpr std::string_view id = "login";
+    inline constexpr std::array<std::string_view, 2> signatures = {
+        "sf::Ftp::Response(void)",
+        "sf::Ftp::Response(const std::string &, const std::string &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Ftp {
+namespace fn {
+namespace disconnect {
+    inline constexpr std::string_view id = "disconnect";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Ftp::Response(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Ftp {
+namespace fn {
+namespace getWorkingDirectory {
+    inline constexpr std::string_view id = "getWorkingDirectory";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Ftp::DirectoryResponse(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Ftp {
+namespace fn {
+namespace getDirectoryListing {
+    inline constexpr std::string_view id = "getDirectoryListing";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Ftp::ListingResponse(const std::string &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Ftp {
+namespace fn {
+namespace parentDirectory {
+    inline constexpr std::string_view id = "parentDirectory";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Ftp::Response(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Ftp {
+namespace fn {
+namespace createDirectory {
+    inline constexpr std::string_view id = "createDirectory";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Ftp::Response(const std::string &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Ftp {
+namespace fn {
+namespace changeDirectory {
+    inline constexpr std::string_view id = "changeDirectory";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Ftp::Response(const std::string &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Ftp {
+namespace fn {
+namespace deleteDirectory {
+    inline constexpr std::string_view id = "deleteDirectory";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Ftp::Response(const std::string &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Ftp {
+namespace fn {
+namespace renameFile {
+    inline constexpr std::string_view id = "renameFile";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Ftp::Response(const std::filesystem::path &, const std::filesystem::path &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Ftp {
+namespace fn {
+namespace sendCommand {
+    inline constexpr std::string_view id = "sendCommand";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Ftp::Response(const std::string &, const std::string &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Ftp {
+namespace fn {
+namespace deleteFile {
+    inline constexpr std::string_view id = "deleteFile";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Ftp::Response(const std::filesystem::path &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Ftp {
+namespace fn {
+namespace download {
+    inline constexpr std::string_view id = "download";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Ftp::Response(const std::filesystem::path &, const std::filesystem::path &, sf::Ftp::TransferMode)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Ftp {
+namespace fn {
+namespace upload {
+    inline constexpr std::string_view id = "upload";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Ftp::Response(const std::filesystem::path &, const std::filesystem::path &, sf::Ftp::TransferMode, bool)"
+    };
+}}}}}
 
 
 namespace type {
@@ -619,6 +4759,543 @@ namespace getBody {
         "const std::string &(void)"
     };
 }}}}}}
+
+
+namespace type {
+namespace sf {
+namespace Http {
+    inline constexpr std::string_view id = "sf::Http";
+}}}
+
+namespace type {
+namespace sf {
+namespace Http {
+namespace fn {
+namespace setHost {
+    inline constexpr std::string_view id = "setHost";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(const std::string &, unsigned short)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Http {
+namespace fn {
+namespace sendRequest {
+    inline constexpr std::string_view id = "sendRequest";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Http::Response(const sf::Http::Request &, sf::Time)"
+    };
+}}}}}
+
+
+namespace type {
+namespace sf {
+namespace Socket {
+    inline constexpr std::string_view id = "sf::Socket";
+}}}
+
+namespace type {
+namespace sf {
+namespace Socket {
+namespace fn {
+namespace setBlocking {
+    inline constexpr std::string_view id = "setBlocking";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(bool)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Socket {
+namespace fn {
+namespace isBlocking {
+    inline constexpr std::string_view id = "isBlocking";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(void)"
+    };
+}}}}}
+
+
+namespace type {
+namespace sf {
+namespace TcpListener {
+    inline constexpr std::string_view id = "sf::TcpListener";
+}}}
+
+namespace type {
+namespace sf {
+namespace TcpListener {
+namespace fn {
+namespace accept {
+    inline constexpr std::string_view id = "accept";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Socket::Status(sf::TcpSocket &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace TcpListener {
+namespace fn {
+namespace getLocalPort {
+    inline constexpr std::string_view id = "getLocalPort";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "unsigned short(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace TcpListener {
+namespace fn {
+namespace listen {
+    inline constexpr std::string_view id = "listen";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Socket::Status(unsigned short, sf::IpAddress)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace TcpListener {
+namespace fn {
+namespace close {
+    inline constexpr std::string_view id = "close";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(void)"
+    };
+}}}}}
+
+
+namespace type {
+namespace sf {
+namespace MemoryInputStream {
+    inline constexpr std::string_view id = "sf::MemoryInputStream";
+}}}
+
+
+namespace type {
+namespace sf {
+namespace TcpSocket {
+    inline constexpr std::string_view id = "sf::TcpSocket";
+}}}
+
+namespace type {
+namespace sf {
+namespace TcpSocket {
+namespace fn {
+namespace connect {
+    inline constexpr std::string_view id = "connect";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Socket::Status(sf::IpAddress, unsigned short, sf::Time)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace TcpSocket {
+namespace fn {
+namespace getLocalPort {
+    inline constexpr std::string_view id = "getLocalPort";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "unsigned short(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace TcpSocket {
+namespace fn {
+namespace getRemotePort {
+    inline constexpr std::string_view id = "getRemotePort";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "unsigned short(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace TcpSocket {
+namespace fn {
+namespace disconnect {
+    inline constexpr std::string_view id = "disconnect";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace TcpSocket {
+namespace fn {
+namespace send {
+    inline constexpr std::string_view id = "send";
+    inline constexpr std::array<std::string_view, 3> signatures = {
+        "sf::Socket::Status(const void *, unsigned long long)",
+        "sf::Socket::Status(const void *, unsigned long long, unsigned long long &)",
+        "sf::Socket::Status(sf::Packet &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace TcpSocket {
+namespace fn {
+namespace receive {
+    inline constexpr std::string_view id = "receive";
+    inline constexpr std::array<std::string_view, 2> signatures = {
+        "sf::Socket::Status(void *, unsigned long long, unsigned long long &)",
+        "sf::Socket::Status(sf::Packet &)"
+    };
+}}}}}
+
+
+namespace type {
+namespace sf {
+namespace UdpSocket {
+    inline constexpr std::string_view id = "sf::UdpSocket";
+}}}
+
+namespace type {
+namespace sf {
+namespace UdpSocket {
+namespace fn {
+namespace unbind {
+    inline constexpr std::string_view id = "unbind";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace UdpSocket {
+namespace fn {
+namespace getLocalPort {
+    inline constexpr std::string_view id = "getLocalPort";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "unsigned short(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace UdpSocket {
+namespace fn {
+namespace bind {
+    inline constexpr std::string_view id = "bind";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Socket::Status(unsigned short, sf::IpAddress)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace UdpSocket {
+namespace fn {
+namespace send {
+    inline constexpr std::string_view id = "send";
+    inline constexpr std::array<std::string_view, 2> signatures = {
+        "sf::Socket::Status(const void *, unsigned long long, sf::IpAddress, unsigned short)",
+        "sf::Socket::Status(sf::Packet &, sf::IpAddress, unsigned short)"
+    };
+}}}}}
+
+
+namespace type {
+namespace sf {
+namespace Clock {
+    inline constexpr std::string_view id = "sf::Clock";
+}}}
+
+namespace type {
+namespace sf {
+namespace Clock {
+namespace fn {
+namespace restart {
+    inline constexpr std::string_view id = "restart";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Time(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Clock {
+namespace fn {
+namespace isRunning {
+    inline constexpr std::string_view id = "isRunning";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Clock {
+namespace fn {
+namespace getElapsedTime {
+    inline constexpr std::string_view id = "getElapsedTime";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Time(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Clock {
+namespace fn {
+namespace start {
+    inline constexpr std::string_view id = "start";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Clock {
+namespace fn {
+namespace stop {
+    inline constexpr std::string_view id = "stop";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace Clock {
+namespace fn {
+namespace reset {
+    inline constexpr std::string_view id = "reset";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Time(void)"
+    };
+}}}}}
+
+
+namespace type {
+namespace sf {
+namespace FileInputStream {
+    inline constexpr std::string_view id = "sf::FileInputStream";
+}}}
+
+namespace type {
+namespace sf {
+namespace FileInputStream {
+namespace fn {
+namespace open {
+    inline constexpr std::string_view id = "open";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(const std::filesystem::path &)"
+    };
+}}}}}
+
+
+namespace type {
+namespace sf {
+namespace Cursor {
+    inline constexpr std::string_view id = "sf::Cursor";
+}}}
+
+
+namespace type {
+namespace sf {
+namespace WindowBase {
+    inline constexpr std::string_view id = "sf::WindowBase";
+}}}
+
+namespace type {
+namespace sf {
+namespace WindowBase {
+namespace fn {
+namespace create {
+    inline constexpr std::string_view id = "create";
+    inline constexpr std::array<std::string_view, 2> signatures = {
+        "void(sf::VideoMode, const sf::String &, unsigned int, sf::State)",
+        "void(sf::VideoMode, const sf::String &, sf::State)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace WindowBase {
+namespace fn {
+namespace hasFocus {
+    inline constexpr std::string_view id = "hasFocus";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace WindowBase {
+namespace fn {
+namespace close {
+    inline constexpr std::string_view id = "close";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace WindowBase {
+namespace fn {
+namespace isOpen {
+    inline constexpr std::string_view id = "isOpen";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "bool(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace WindowBase {
+namespace fn {
+namespace setMouseCursor {
+    inline constexpr std::string_view id = "setMouseCursor";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(const sf::Cursor &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace WindowBase {
+namespace fn {
+namespace getPosition {
+    inline constexpr std::string_view id = "getPosition";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Vector2i(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace WindowBase {
+namespace fn {
+namespace setPosition {
+    inline constexpr std::string_view id = "setPosition";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(sf::Vector2i)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace WindowBase {
+namespace fn {
+namespace setKeyRepeatEnabled {
+    inline constexpr std::string_view id = "setKeyRepeatEnabled";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(bool)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace WindowBase {
+namespace fn {
+namespace getSize {
+    inline constexpr std::string_view id = "getSize";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "sf::Vector2u(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace WindowBase {
+namespace fn {
+namespace setIcon {
+    inline constexpr std::string_view id = "setIcon";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(sf::Vector2u, const unsigned char *)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace WindowBase {
+namespace fn {
+namespace setSize {
+    inline constexpr std::string_view id = "setSize";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(sf::Vector2u)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace WindowBase {
+namespace fn {
+namespace setTitle {
+    inline constexpr std::string_view id = "setTitle";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(const sf::String &)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace WindowBase {
+namespace fn {
+namespace setVisible {
+    inline constexpr std::string_view id = "setVisible";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(bool)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace WindowBase {
+namespace fn {
+namespace requestFocus {
+    inline constexpr std::string_view id = "requestFocus";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(void)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace WindowBase {
+namespace fn {
+namespace setMouseCursorVisible {
+    inline constexpr std::string_view id = "setMouseCursorVisible";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(bool)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace WindowBase {
+namespace fn {
+namespace setMouseCursorGrabbed {
+    inline constexpr std::string_view id = "setMouseCursorGrabbed";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(bool)"
+    };
+}}}}}
+
+namespace type {
+namespace sf {
+namespace WindowBase {
+namespace fn {
+namespace setJoystickThreshold {
+    inline constexpr std::string_view id = "setJoystickThreshold";
+    inline constexpr std::array<std::string_view, 1> signatures = {
+        "void(float)"
+    };
+}}}}}
 
 
 }

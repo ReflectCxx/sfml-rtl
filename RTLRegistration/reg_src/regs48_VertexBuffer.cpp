@@ -19,7 +19,9 @@
  *****************************************************************************/
 
 
+#include <SFML/Graphics/PrimitiveType.hpp>
 #include <SFML/Graphics/VertexBuffer.hpp>
+#include <SFML/Graphics/Vertex.hpp>
 
 #include "../reg_ids.h"
 #include "../reg_decls.h"
@@ -30,6 +32,76 @@ namespace regs48::fn {
 
         fns.push_back(rtl::type().function(cxx::fn::sf::swap::id)
                                  .build(&sf::swap));
+    }
+}
+
+
+namespace regs48::type0 {
+    void init(std::vector<rtl::Function>& fns) {
+
+        fns.push_back(rtl::type().record<sf::VertexBuffer>(cxx::type::sf::VertexBuffer::id)
+                                 .build());
+
+        fns.push_back(rtl::type().member<sf::VertexBuffer>()
+                                 .method(cxx::type::sf::VertexBuffer::fn::create::id)
+                                 .build(&sf::VertexBuffer::create));
+
+        fns.push_back(rtl::type().member<sf::VertexBuffer>()
+                                 .constructor<sf::PrimitiveType>().build());
+
+        fns.push_back(rtl::type().member<sf::VertexBuffer>()
+                                 .constructor<sf::VertexBuffer::Usage>().build());
+
+        fns.push_back(rtl::type().member<sf::VertexBuffer>()
+                                 .constructor<sf::PrimitiveType, sf::VertexBuffer::Usage>().build());
+
+        fns.push_back(rtl::type().member<sf::VertexBuffer>()
+                                 .method(cxx::type::sf::VertexBuffer::fn::setPrimitiveType::id)
+                                 .build(&sf::VertexBuffer::setPrimitiveType));
+
+        fns.push_back(rtl::type().member<sf::VertexBuffer>()
+                                 .methodConst(cxx::type::sf::VertexBuffer::fn::getVertexCount::id)
+                                 .build(&sf::VertexBuffer::getVertexCount));
+
+        fns.push_back(rtl::type().member<sf::VertexBuffer>()
+                                 .method<const sf::Vertex *>(cxx::type::sf::VertexBuffer::fn::update::id)
+                                 .build(&sf::VertexBuffer::update));
+
+        fns.push_back(rtl::type().member<sf::VertexBuffer>()
+                                 .method<const sf::Vertex *, unsigned long long, unsigned int>(cxx::type::sf::VertexBuffer::fn::update::id)
+                                 .build(&sf::VertexBuffer::update));
+
+        fns.push_back(rtl::type().member<sf::VertexBuffer>()
+                                 .method<const sf::VertexBuffer &>(cxx::type::sf::VertexBuffer::fn::update::id)
+                                 .build(&sf::VertexBuffer::update));
+
+        fns.push_back(rtl::type().member<sf::VertexBuffer>()
+                                 .methodStatic(cxx::type::sf::VertexBuffer::fn::bind::id)
+                                 .build(&sf::VertexBuffer::bind));
+
+        fns.push_back(rtl::type().member<sf::VertexBuffer>()
+                                 .method(cxx::type::sf::VertexBuffer::fn::swap::id)
+                                 .build(&sf::VertexBuffer::swap));
+
+        fns.push_back(rtl::type().member<sf::VertexBuffer>()
+                                 .methodConst(cxx::type::sf::VertexBuffer::fn::getNativeHandle::id)
+                                 .build(&sf::VertexBuffer::getNativeHandle));
+
+        fns.push_back(rtl::type().member<sf::VertexBuffer>()
+                                 .methodConst(cxx::type::sf::VertexBuffer::fn::getPrimitiveType::id)
+                                 .build(&sf::VertexBuffer::getPrimitiveType));
+
+        fns.push_back(rtl::type().member<sf::VertexBuffer>()
+                                 .method(cxx::type::sf::VertexBuffer::fn::setUsage::id)
+                                 .build(&sf::VertexBuffer::setUsage));
+
+        fns.push_back(rtl::type().member<sf::VertexBuffer>()
+                                 .methodConst(cxx::type::sf::VertexBuffer::fn::getUsage::id)
+                                 .build(&sf::VertexBuffer::getUsage));
+
+        fns.push_back(rtl::type().member<sf::VertexBuffer>()
+                                 .methodStatic(cxx::type::sf::VertexBuffer::fn::isAvailable::id)
+                                 .build(&sf::VertexBuffer::isAvailable));
     }
 }
 

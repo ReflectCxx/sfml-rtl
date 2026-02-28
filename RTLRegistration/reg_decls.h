@@ -24,16 +24,6 @@
 #include "rtl_builder.h"
 
 
-namespace regs65::fn {
-    void init(std::vector<rtl::Function>&);
-}
-
-
-namespace regs43::fn {
-    void init(std::vector<rtl::Function>&);
-}
-
-
 namespace regs3::fn {
     void init(std::vector<rtl::Function>&);
 }
@@ -44,12 +34,12 @@ namespace regs8::fn {
 }
 
 
-namespace regs48::fn {
+namespace regs62::fn {
     void init(std::vector<rtl::Function>&);
 }
 
 
-namespace regs62::fn {
+namespace regs65::fn {
     void init(std::vector<rtl::Function>&);
 }
 
@@ -59,12 +49,22 @@ namespace regs71::fn {
 }
 
 
-namespace regs76::fn {
+namespace regs43::fn {
+    void init(std::vector<rtl::Function>&);
+}
+
+
+namespace regs48::fn {
     void init(std::vector<rtl::Function>&);
 }
 
 
 namespace regs78::fn {
+    void init(std::vector<rtl::Function>&);
+}
+
+
+namespace regs76::fn {
     void init(std::vector<rtl::Function>&);
 }
 
@@ -89,6 +89,196 @@ namespace regs84::fn {
 }
 
 
+namespace regs10::type0 {
+    void init(std::vector<rtl::Function>&);
+}
+
+
+namespace regs2::type0 {
+    void init(std::vector<rtl::Function>&);
+}
+
+
+namespace regs66::type0 {
+    void init(std::vector<rtl::Function>&);
+}
+
+
+namespace regs66::type1 {
+    void init(std::vector<rtl::Function>&);
+}
+
+
+namespace regs34::type0 {
+    void init(std::vector<rtl::Function>&);
+}
+
+
+namespace regs11::type0 {
+    void init(std::vector<rtl::Function>&);
+}
+
+
+namespace regs25::type0 {
+    void init(std::vector<rtl::Function>&);
+}
+
+
+namespace regs6::type0 {
+    void init(std::vector<rtl::Function>&);
+}
+
+
+namespace regs7::type0 {
+    void init(std::vector<rtl::Function>&);
+}
+
+
+namespace regs9::type0 {
+    void init(std::vector<rtl::Function>&);
+}
+
+
+namespace regs22::type0 {
+    void init(std::vector<rtl::Function>&);
+}
+
+
+namespace regs72::type0 {
+    void init(std::vector<rtl::Function>&);
+}
+
+
+namespace regs20::type0 {
+    void init(std::vector<rtl::Function>&);
+}
+
+
+namespace regs94::type0 {
+    void init(std::vector<rtl::Function>&);
+}
+
+
+namespace regs21::type0 {
+    void init(std::vector<rtl::Function>&);
+}
+
+
+namespace regs31::type0 {
+    void init(std::vector<rtl::Function>&);
+}
+
+
+namespace regs23::type0 {
+    void init(std::vector<rtl::Function>&);
+}
+
+
+namespace regs24::type0 {
+    void init(std::vector<rtl::Function>&);
+}
+
+
+namespace regs26::type0 {
+    void init(std::vector<rtl::Function>&);
+}
+
+
+namespace regs30::type0 {
+    void init(std::vector<rtl::Function>&);
+}
+
+
+namespace regs32::type0 {
+    void init(std::vector<rtl::Function>&);
+}
+
+
+namespace regs33::type0 {
+    void init(std::vector<rtl::Function>&);
+}
+
+
+namespace regs37::type0 {
+    void init(std::vector<rtl::Function>&);
+}
+
+
+namespace regs38::type0 {
+    void init(std::vector<rtl::Function>&);
+}
+
+
+namespace regs39::type0 {
+    void init(std::vector<rtl::Function>&);
+}
+
+
+namespace regs47::type0 {
+    void init(std::vector<rtl::Function>&);
+}
+
+
+namespace regs40::type0 {
+    void init(std::vector<rtl::Function>&);
+}
+
+
+namespace regs41::type0 {
+    void init(std::vector<rtl::Function>&);
+}
+
+
+namespace regs42::type0 {
+    void init(std::vector<rtl::Function>&);
+}
+
+
+namespace regs43::type0 {
+    void init(std::vector<rtl::Function>&);
+}
+
+
+namespace regs45::type0 {
+    void init(std::vector<rtl::Function>&);
+}
+
+
+namespace regs53::type0 {
+    void init(std::vector<rtl::Function>&);
+}
+
+
+namespace regs46::type0 {
+    void init(std::vector<rtl::Function>&);
+}
+
+
+namespace regs48::type0 {
+    void init(std::vector<rtl::Function>&);
+}
+
+
+namespace regs56::type0 {
+    void init(std::vector<rtl::Function>&);
+}
+
+
+namespace regs54::type0 {
+    void init(std::vector<rtl::Function>&);
+}
+
+
+namespace regs49::type0 {
+    void init(std::vector<rtl::Function>&);
+}
+
+
+namespace regs83::type0 {
+    void init(std::vector<rtl::Function>&);
+}
+
+
 namespace regs51::type0 {
     void init(std::vector<rtl::Function>&);
 }
@@ -104,12 +294,67 @@ namespace regs51::type2 {
 }
 
 
+namespace regs51::type3 {
+    void init(std::vector<rtl::Function>&);
+}
+
+
 namespace regs52::type0 {
     void init(std::vector<rtl::Function>&);
 }
 
 
 namespace regs52::type1 {
+    void init(std::vector<rtl::Function>&);
+}
+
+
+namespace regs52::type2 {
+    void init(std::vector<rtl::Function>&);
+}
+
+
+namespace regs55::type0 {
+    void init(std::vector<rtl::Function>&);
+}
+
+
+namespace regs57::type0 {
+    void init(std::vector<rtl::Function>&);
+}
+
+
+namespace regs64::type0 {
+    void init(std::vector<rtl::Function>&);
+}
+
+
+namespace regs58::type0 {
+    void init(std::vector<rtl::Function>&);
+}
+
+
+namespace regs59::type0 {
+    void init(std::vector<rtl::Function>&);
+}
+
+
+namespace regs61::type0 {
+    void init(std::vector<rtl::Function>&);
+}
+
+
+namespace regs63::type0 {
+    void init(std::vector<rtl::Function>&);
+}
+
+
+namespace regs73::type0 {
+    void init(std::vector<rtl::Function>&);
+}
+
+
+namespace regs95::type0 {
     void init(std::vector<rtl::Function>&);
 }
 

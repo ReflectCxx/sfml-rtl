@@ -19,9 +19,11 @@
  *****************************************************************************/
 
 
+#include <SFML/System/Time.hpp>
 #include <SFML/Network/Ftp.hpp>
 #include <filesystem>
 #include <xstring>
+#include <SFML/Network/IpAddress.hpp>
 
 #include "../reg_ids.h"
 #include "../reg_decls.h"
@@ -75,6 +77,79 @@ namespace regs51::type2 {
         fns.push_back(rtl::type().member<sf::Ftp::DirectoryResponse>()
                                  .methodConst(cxx::type::sf::Ftp::DirectoryResponse::fn::getDirectory::id)
                                  .build(&sf::Ftp::DirectoryResponse::getDirectory));
+    }
+}
+
+
+namespace regs51::type3 {
+    void init(std::vector<rtl::Function>& fns) {
+
+        fns.push_back(rtl::type().record<sf::Ftp>(cxx::type::sf::Ftp::id)
+                                 .build());
+
+        fns.push_back(rtl::type().member<sf::Ftp>()
+                                 .method(cxx::type::sf::Ftp::fn::keepAlive::id)
+                                 .build(&sf::Ftp::keepAlive));
+
+        fns.push_back(rtl::type().member<sf::Ftp>()
+                                 .method(cxx::type::sf::Ftp::fn::connect::id)
+                                 .build(&sf::Ftp::connect));
+
+        fns.push_back(rtl::type().member<sf::Ftp>()
+                                 .method<void>(cxx::type::sf::Ftp::fn::login::id)
+                                 .build(&sf::Ftp::login));
+
+        fns.push_back(rtl::type().member<sf::Ftp>()
+                                 .method<const std::string &, const std::string &>(cxx::type::sf::Ftp::fn::login::id)
+                                 .build(&sf::Ftp::login));
+
+        fns.push_back(rtl::type().member<sf::Ftp>()
+                                 .method(cxx::type::sf::Ftp::fn::disconnect::id)
+                                 .build(&sf::Ftp::disconnect));
+
+        fns.push_back(rtl::type().member<sf::Ftp>()
+                                 .method(cxx::type::sf::Ftp::fn::getWorkingDirectory::id)
+                                 .build(&sf::Ftp::getWorkingDirectory));
+
+        fns.push_back(rtl::type().member<sf::Ftp>()
+                                 .method(cxx::type::sf::Ftp::fn::getDirectoryListing::id)
+                                 .build(&sf::Ftp::getDirectoryListing));
+
+        fns.push_back(rtl::type().member<sf::Ftp>()
+                                 .method(cxx::type::sf::Ftp::fn::parentDirectory::id)
+                                 .build(&sf::Ftp::parentDirectory));
+
+        fns.push_back(rtl::type().member<sf::Ftp>()
+                                 .method(cxx::type::sf::Ftp::fn::createDirectory::id)
+                                 .build(&sf::Ftp::createDirectory));
+
+        fns.push_back(rtl::type().member<sf::Ftp>()
+                                 .method(cxx::type::sf::Ftp::fn::changeDirectory::id)
+                                 .build(&sf::Ftp::changeDirectory));
+
+        fns.push_back(rtl::type().member<sf::Ftp>()
+                                 .method(cxx::type::sf::Ftp::fn::deleteDirectory::id)
+                                 .build(&sf::Ftp::deleteDirectory));
+
+        fns.push_back(rtl::type().member<sf::Ftp>()
+                                 .method(cxx::type::sf::Ftp::fn::renameFile::id)
+                                 .build(&sf::Ftp::renameFile));
+
+        fns.push_back(rtl::type().member<sf::Ftp>()
+                                 .method(cxx::type::sf::Ftp::fn::sendCommand::id)
+                                 .build(&sf::Ftp::sendCommand));
+
+        fns.push_back(rtl::type().member<sf::Ftp>()
+                                 .method(cxx::type::sf::Ftp::fn::deleteFile::id)
+                                 .build(&sf::Ftp::deleteFile));
+
+        fns.push_back(rtl::type().member<sf::Ftp>()
+                                 .method(cxx::type::sf::Ftp::fn::download::id)
+                                 .build(&sf::Ftp::download));
+
+        fns.push_back(rtl::type().member<sf::Ftp>()
+                                 .method(cxx::type::sf::Ftp::fn::upload::id)
+                                 .build(&sf::Ftp::upload));
     }
 }
 

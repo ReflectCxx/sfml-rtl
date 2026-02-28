@@ -19,7 +19,13 @@
  *****************************************************************************/
 
 
+#include <filesystem>
+#include <SFML/Window/Window.hpp>
+#include <SFML/System/Vector2.hpp>
 #include <SFML/Graphics/Texture.hpp>
+#include <SFML/Graphics/Rect.hpp>
+#include <SFML/Graphics/Image.hpp>
+#include <SFML/Graphics/CoordinateType.hpp>
 
 #include "../reg_ids.h"
 #include "../reg_decls.h"
@@ -30,6 +36,132 @@ namespace regs43::fn {
 
         fns.push_back(rtl::type().function(cxx::fn::sf::swap::id)
                                  .build(&sf::swap));
+    }
+}
+
+
+namespace regs43::type0 {
+    void init(std::vector<rtl::Function>& fns) {
+
+        fns.push_back(rtl::type().record<sf::Texture>(cxx::type::sf::Texture::id)
+                                 .build());
+
+        fns.push_back(rtl::type().member<sf::Texture>()
+                                 .method(cxx::type::sf::Texture::fn::setRepeated::id)
+                                 .build(&sf::Texture::setRepeated));
+
+        fns.push_back(rtl::type().member<sf::Texture>()
+                                 .constructor<const std::filesystem::path &, bool>().build());
+
+        fns.push_back(rtl::type().member<sf::Texture>()
+                                 .constructor<const std::filesystem::path &, bool, const sf::IntRect &>().build());
+
+        fns.push_back(rtl::type().member<sf::Texture>()
+                                 .constructor<const void *, unsigned long long, bool>().build());
+
+        fns.push_back(rtl::type().member<sf::Texture>()
+                                 .constructor<const void *, unsigned long long, bool, const sf::IntRect &>().build());
+
+        fns.push_back(rtl::type().member<sf::Texture>()
+                                 .constructor<const sf::Image &, bool>().build());
+
+        fns.push_back(rtl::type().member<sf::Texture>()
+                                 .constructor<const sf::Image &, bool, const sf::IntRect &>().build());
+
+        fns.push_back(rtl::type().member<sf::Texture>()
+                                 .constructor<sf::Vector2u, bool>().build());
+
+        fns.push_back(rtl::type().member<sf::Texture>()
+                                 .method(cxx::type::sf::Texture::fn::setSmooth::id)
+                                 .build(&sf::Texture::setSmooth));
+
+        fns.push_back(rtl::type().member<sf::Texture>()
+                                 .method(cxx::type::sf::Texture::fn::resize::id)
+                                 .build(&sf::Texture::resize));
+
+        fns.push_back(rtl::type().member<sf::Texture>()
+                                 .method(cxx::type::sf::Texture::fn::loadFromFile::id)
+                                 .build(&sf::Texture::loadFromFile));
+
+        fns.push_back(rtl::type().member<sf::Texture>()
+                                 .methodConst(cxx::type::sf::Texture::fn::copyToImage::id)
+                                 .build(&sf::Texture::copyToImage));
+
+        fns.push_back(rtl::type().member<sf::Texture>()
+                                 .method(cxx::type::sf::Texture::fn::loadFromMemory::id)
+                                 .build(&sf::Texture::loadFromMemory));
+
+        fns.push_back(rtl::type().member<sf::Texture>()
+                                 .methodStatic(cxx::type::sf::Texture::fn::bind::id)
+                                 .build(&sf::Texture::bind));
+
+        fns.push_back(rtl::type().member<sf::Texture>()
+                                 .methodConst(cxx::type::sf::Texture::fn::getSize::id)
+                                 .build(&sf::Texture::getSize));
+
+        fns.push_back(rtl::type().member<sf::Texture>()
+                                 .method(cxx::type::sf::Texture::fn::loadFromImage::id)
+                                 .build(&sf::Texture::loadFromImage));
+
+        fns.push_back(rtl::type().member<sf::Texture>()
+                                 .method<const unsigned char *>(cxx::type::sf::Texture::fn::update::id)
+                                 .build(&sf::Texture::update));
+
+        fns.push_back(rtl::type().member<sf::Texture>()
+                                 .method<const unsigned char *, sf::Vector2u, sf::Vector2u>(cxx::type::sf::Texture::fn::update::id)
+                                 .build(&sf::Texture::update));
+
+        fns.push_back(rtl::type().member<sf::Texture>()
+                                 .method<const sf::Texture &>(cxx::type::sf::Texture::fn::update::id)
+                                 .build(&sf::Texture::update));
+
+        fns.push_back(rtl::type().member<sf::Texture>()
+                                 .method<const sf::Texture &, sf::Vector2u>(cxx::type::sf::Texture::fn::update::id)
+                                 .build(&sf::Texture::update));
+
+        fns.push_back(rtl::type().member<sf::Texture>()
+                                 .method<const sf::Image &>(cxx::type::sf::Texture::fn::update::id)
+                                 .build(&sf::Texture::update));
+
+        fns.push_back(rtl::type().member<sf::Texture>()
+                                 .method<const sf::Image &, sf::Vector2u>(cxx::type::sf::Texture::fn::update::id)
+                                 .build(&sf::Texture::update));
+
+        fns.push_back(rtl::type().member<sf::Texture>()
+                                 .method<const sf::Window &>(cxx::type::sf::Texture::fn::update::id)
+                                 .build(&sf::Texture::update));
+
+        fns.push_back(rtl::type().member<sf::Texture>()
+                                 .method<const sf::Window &, sf::Vector2u>(cxx::type::sf::Texture::fn::update::id)
+                                 .build(&sf::Texture::update));
+
+        fns.push_back(rtl::type().member<sf::Texture>()
+                                 .methodConst(cxx::type::sf::Texture::fn::isSmooth::id)
+                                 .build(&sf::Texture::isSmooth));
+
+        fns.push_back(rtl::type().member<sf::Texture>()
+                                 .methodConst(cxx::type::sf::Texture::fn::isSrgb::id)
+                                 .build(&sf::Texture::isSrgb));
+
+        fns.push_back(rtl::type().member<sf::Texture>()
+                                 .methodConst(cxx::type::sf::Texture::fn::isRepeated::id)
+                                 .build(&sf::Texture::isRepeated));
+
+        fns.push_back(rtl::type().member<sf::Texture>()
+                                 .method(cxx::type::sf::Texture::fn::generateMipmap::id)
+                                 .build(&sf::Texture::generateMipmap));
+
+        fns.push_back(rtl::type().member<sf::Texture>()
+                                 .methodStatic(cxx::type::sf::Texture::fn::getMaximumSize::id)
+                                 .build(&sf::Texture::getMaximumSize));
+
+        fns.push_back(rtl::type().member<sf::Texture>()
+                                 .method(cxx::type::sf::Texture::fn::swap::id)
+                                 .build(&sf::Texture::swap));
+
+        fns.push_back(rtl::type().member<sf::Texture>()
+                                 .methodConst(cxx::type::sf::Texture::fn::getNativeHandle::id)
+                                 .build(&sf::Texture::getNativeHandle));
     }
 }
 
