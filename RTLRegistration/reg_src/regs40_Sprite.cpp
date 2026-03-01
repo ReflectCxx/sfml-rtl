@@ -19,9 +19,9 @@
  *****************************************************************************/
 
 
+#include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Color.hpp>
 #include <SFML/Graphics/Texture.hpp>
-#include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Rect.hpp>
 
 #include "../reg_ids.h"

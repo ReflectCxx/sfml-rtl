@@ -21,7 +21,6 @@
 
 #include <SFML/Window/Context.hpp>
 #include <SFML/Window/ContextSettings.hpp>
-#include <__msvc_string_view.hpp>
 #include <SFML/System/Vector2.hpp>
 
 #include "../reg_ids.h"

@@ -19,8 +19,8 @@
  *****************************************************************************/
 
 
-#include <SFML/Network/Socket.hpp>
 #include <SFML/Network/SocketSelector.hpp>
+#include <SFML/Network/Socket.hpp>
 #include <SFML/System/Time.hpp>
 
 #include "../reg_ids.h"

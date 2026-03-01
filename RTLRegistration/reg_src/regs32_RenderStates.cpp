@@ -19,8 +19,8 @@
  *****************************************************************************/
 
 
-#include <SFML/Graphics/Transform.hpp>
 #include <SFML/Graphics/RenderStates.hpp>
+#include <SFML/Graphics/Transform.hpp>
 #include <SFML/Graphics/BlendMode.hpp>
 #include <SFML/Graphics/StencilMode.hpp>
 

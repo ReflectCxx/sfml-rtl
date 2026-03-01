@@ -19,9 +19,9 @@
  *****************************************************************************/
 
 
-#include <SFML/System/InputStream.hpp>
-#include <filesystem>
 #include <SFML/Graphics/Font.hpp>
+#include <SFML/Graphics/Image.hpp>
+#include <SFML/System/InputStream.hpp>
 #include <SFML/Graphics/Glyph.hpp>
 #include <SFML/Graphics/Texture.hpp>
 

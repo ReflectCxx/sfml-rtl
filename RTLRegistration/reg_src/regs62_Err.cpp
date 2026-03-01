@@ -19,8 +19,8 @@
  *****************************************************************************/
 
 
-#include <__msvc_ostream.hpp>
 #include <SFML/System/Err.hpp>
+#include <iostream>
 
 #include "../reg_ids.h"
 #include "../reg_decls.h"

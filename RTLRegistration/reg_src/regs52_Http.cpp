@@ -19,7 +19,6 @@
  *****************************************************************************/
 
 
-#include <xstring>
 #include <SFML/System/Time.hpp>
 #include <SFML/Network/Http.hpp>
 

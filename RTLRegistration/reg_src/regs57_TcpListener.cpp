@@ -19,8 +19,8 @@
  *****************************************************************************/
 
 
-#include <SFML/Network/Socket.hpp>
 #include <SFML/Network/IpAddress.hpp>
+#include <SFML/Network/Socket.hpp>
 #include <SFML/Network/TcpListener.hpp>
 #include <SFML/Network/TcpSocket.hpp>
 

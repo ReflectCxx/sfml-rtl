@@ -21,8 +21,6 @@
 
 #include <SFML/System/Time.hpp>
 #include <SFML/Network/Ftp.hpp>
-#include <filesystem>
-#include <xstring>
 #include <SFML/Network/IpAddress.hpp>
 
 #include "../reg_ids.h"

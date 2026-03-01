@@ -19,15 +19,13 @@
  *****************************************************************************/
 
 
-#include <SFML/System/Vector3.hpp>
-#include <xstring>
-#include <SFML/System/InputStream.hpp>
-#include <filesystem>
 #include <SFML/Graphics/Shader.hpp>
-#include <__msvc_string_view.hpp>
-#include <SFML/System/Vector2.hpp>
-#include <SFML/Graphics/Glsl.hpp>
+#include <SFML/System/Vector3.hpp>
+#include <SFML/System/InputStream.hpp>
+#include <ostream>
 #include <SFML/Graphics/Texture.hpp>
+#include <SFML/System/Vector2.hpp>
+//#include <SFML/Graphics/Glsl.inl>
 
 #include "../reg_ids.h"
 #include "../reg_decls.h"

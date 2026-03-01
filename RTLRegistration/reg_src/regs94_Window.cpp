@@ -19,11 +19,11 @@
  *****************************************************************************/
 
 
+#include <SFML/Window/Window.hpp>
 #include <SFML/System/String.hpp>
 #include <SFML/Window/VideoMode.hpp>
 #include <SFML/Window/ContextSettings.hpp>
 #include <SFML/Window/WindowEnums.hpp>
-#include <SFML/Window/Window.hpp>
 
 #include "../reg_ids.h"
 #include "../reg_decls.h"

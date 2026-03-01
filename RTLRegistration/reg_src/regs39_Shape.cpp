@@ -19,10 +19,10 @@
  *****************************************************************************/
 
 
+#include <SFML/Graphics/Shape.hpp>
 #include <SFML/System/Vector2.hpp>
 #include <SFML/Graphics/Color.hpp>
 #include <SFML/Graphics/Texture.hpp>
-#include <SFML/Graphics/Shape.hpp>
 #include <SFML/Graphics/Rect.hpp>
 
 #include "../reg_ids.h"

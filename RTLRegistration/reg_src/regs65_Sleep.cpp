@@ -19,8 +19,8 @@
  *****************************************************************************/
 
 
-#include <SFML/System/Time.hpp>
 #include <SFML/System/Sleep.hpp>
+#include <SFML/System/Time.hpp>
 
 #include "../reg_ids.h"
 #include "../reg_decls.h"

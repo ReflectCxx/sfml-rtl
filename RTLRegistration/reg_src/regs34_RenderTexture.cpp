@@ -19,10 +19,10 @@
  *****************************************************************************/
 
 
+#include <SFML/Window/ContextSettings.hpp>
+#include <SFML/Graphics/RenderTexture.hpp>
 #include <SFML/Graphics/Texture.hpp>
 #include <SFML/System/Vector2.hpp>
-#include <SFML/Graphics/RenderTexture.hpp>
-#include <SFML/Window/ContextSettings.hpp>
 
 #include "../reg_ids.h"
 #include "../reg_decls.h"

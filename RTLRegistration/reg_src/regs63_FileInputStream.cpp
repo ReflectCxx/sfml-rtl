@@ -19,7 +19,6 @@
  *****************************************************************************/
 
 
-#include <filesystem>
 #include <SFML/System/FileInputStream.hpp>
 
 #include "../reg_ids.h"

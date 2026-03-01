@@ -19,8 +19,8 @@
  *****************************************************************************/
 
 
-#include <SFML/System/String.hpp>
 #include <SFML/Window/Clipboard.hpp>
+#include <SFML/System/String.hpp>
 
 #include "../reg_ids.h"
 #include "../reg_decls.h"

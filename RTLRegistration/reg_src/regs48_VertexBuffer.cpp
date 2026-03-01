@@ -19,8 +19,8 @@
  *****************************************************************************/
 
 
-#include <SFML/Graphics/PrimitiveType.hpp>
 #include <SFML/Graphics/VertexBuffer.hpp>
+#include <SFML/Graphics/PrimitiveType.hpp>
 #include <SFML/Graphics/Vertex.hpp>
 
 #include "../reg_ids.h"

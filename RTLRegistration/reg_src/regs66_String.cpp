@@ -20,8 +20,7 @@
 
 
 #include <SFML/System/String.hpp>
-#include <xlocale>
-#include <xstring>
+#include <SFML/Config.hpp>
 
 #include "../reg_ids.h"
 #include "../reg_decls.h"

@@ -19,8 +19,8 @@
  *****************************************************************************/
 
 
-#include <SFML/System/Vector2.hpp>
 #include <SFML/Graphics/RectangleShape.hpp>
+#include <SFML/System/Vector2.hpp>
 
 #include "../reg_ids.h"
 #include "../reg_decls.h"
