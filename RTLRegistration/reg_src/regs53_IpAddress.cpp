@@ -20,7 +20,7 @@
 
 
 #include <SFML/Network/IpAddress.hpp>
-#include <SFML/System/Time.hpp>
+#include <istream>
 
 #include "../reg_ids.h"
 #include "../reg_decls.h"

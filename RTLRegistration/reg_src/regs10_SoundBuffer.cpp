@@ -20,7 +20,6 @@
 
 
 #include <SFML/Audio/SoundBuffer.hpp>
-#include <SFML/Audio/OutputSoundFile.hpp>
 #include <SFML/System/Time.hpp>
 
 #include "../reg_ids.h"
