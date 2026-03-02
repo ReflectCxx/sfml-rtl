@@ -20,6 +20,7 @@
 
 
 #include <SFML/Audio/InputSoundFile.hpp>
+#include <SFML/System/FileInputStream.hpp>
 #include <SFML/System/InputStream.hpp>
 #include <SFML/System/Time.hpp>
 
