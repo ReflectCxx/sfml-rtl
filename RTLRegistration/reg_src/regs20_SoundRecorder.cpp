@@ -20,7 +20,6 @@
 
 
 #include <SFML/Audio/SoundRecorder.hpp>
-#include <SFML/Audio/SoundChannel.hpp>
 
 #include "../reg_ids.h"
 #include "../reg_decls.h"

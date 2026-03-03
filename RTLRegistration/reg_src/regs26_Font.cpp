@@ -20,9 +20,7 @@
 
 
 #include <SFML/Graphics/Font.hpp>
-#include <SFML/System/InputStream.hpp>
-#include <SFML/Graphics/Glyph.hpp>
-#include <SFML/Graphics/Texture.hpp>
+#include <SFML/System/FileInputStream.hpp>
 
 #include "../reg_ids.h"
 #include "../reg_decls.h"

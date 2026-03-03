@@ -20,7 +20,6 @@
 
 
 #include <SFML/Graphics/ConvexShape.hpp>
-#include <SFML/System/Vector2.hpp>
 
 #include "../reg_ids.h"
 #include "../reg_decls.h"

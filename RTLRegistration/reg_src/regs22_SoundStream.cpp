@@ -20,8 +20,6 @@
 
 
 #include <SFML/Audio/SoundStream.hpp>
-#include <SFML/System/Time.hpp>
-#include <SFML/Audio/SoundSource.hpp>
 
 #include "../reg_ids.h"
 #include "../reg_decls.h"

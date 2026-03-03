@@ -20,10 +20,6 @@
 
 
 #include <SFML/Graphics/View.hpp>
-#include <SFML/Graphics/Rect.hpp>
-#include <SFML/System/Angle.hpp>
-#include <SFML/System/Vector2.hpp>
-#include <SFML/Graphics/Transform.hpp>
 
 #include "../reg_ids.h"
 #include "../reg_decls.h"

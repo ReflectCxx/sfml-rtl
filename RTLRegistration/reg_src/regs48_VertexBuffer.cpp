@@ -20,8 +20,7 @@
 
 
 #include <SFML/Graphics/VertexBuffer.hpp>
-#include <SFML/Graphics/PrimitiveType.hpp>
-#include <SFML/Graphics/Vertex.hpp>
+#include <SFML/Graphics/RenderTarget.hpp>
 
 #include "../reg_ids.h"
 #include "../reg_decls.h"

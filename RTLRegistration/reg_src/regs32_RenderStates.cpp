@@ -20,9 +20,6 @@
 
 
 #include <SFML/Graphics/RenderStates.hpp>
-#include <SFML/Graphics/Transform.hpp>
-#include <SFML/Graphics/BlendMode.hpp>
-#include <SFML/Graphics/StencilMode.hpp>
 
 #include "../reg_ids.h"
 #include "../reg_decls.h"

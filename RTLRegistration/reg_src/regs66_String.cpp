@@ -20,7 +20,6 @@
 
 
 #include <SFML/System/String.hpp>
-#include <SFML/Config.hpp>
 
 #include "../reg_ids.h"
 #include "../reg_decls.h"

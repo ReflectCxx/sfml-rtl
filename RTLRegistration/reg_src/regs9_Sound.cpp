@@ -21,8 +21,6 @@
 
 #include <SFML/Audio/Sound.hpp>
 #include <SFML/Audio/SoundBuffer.hpp>
-#include <SFML/Audio/SoundSource.hpp>
-#include <SFML/System/Time.hpp>
 
 #include "../reg_ids.h"
 #include "../reg_decls.h"

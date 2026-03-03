@@ -20,7 +20,6 @@
 
 
 #include <SFML/Window/Sensor.hpp>
-#include <SFML/System/Vector3.hpp>
 
 #include "../reg_ids.h"
 #include "../reg_decls.h"

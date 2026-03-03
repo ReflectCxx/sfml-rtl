@@ -19,16 +19,7 @@
  *****************************************************************************/
 
 
-#include <SFML/Graphics/PrimitiveType.hpp>
 #include <SFML/Graphics/RenderTarget.hpp>
-#include <SFML/System/Vector2.hpp>
-#include <SFML/Graphics/Color.hpp>
-#include <SFML/Graphics/StencilMode.hpp>
-#include <SFML/Graphics/View.hpp>
-#include <SFML/Graphics/RenderStates.hpp>
-#include <SFML/Graphics/Vertex.hpp>
-#include <SFML/Graphics/Rect.hpp>
-#include <SFML/Graphics/Drawable.hpp>
 #include <SFML/Graphics/VertexBuffer.hpp>
 
 #include "../reg_ids.h"

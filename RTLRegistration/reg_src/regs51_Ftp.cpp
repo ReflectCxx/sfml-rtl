@@ -19,9 +19,7 @@
  *****************************************************************************/
 
 
-#include <SFML/System/Time.hpp>
 #include <SFML/Network/Ftp.hpp>
-#include <fstream>
 #include <SFML/Network/IpAddress.hpp>
 
 #include "../reg_ids.h"

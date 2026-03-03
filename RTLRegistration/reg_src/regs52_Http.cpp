@@ -19,9 +19,7 @@
  *****************************************************************************/
 
 
-#include <SFML/System/Time.hpp>
 #include <SFML/Network/Http.hpp>
-#include <SFML/System/Export.hpp>
 
 #include "../reg_ids.h"
 #include "../reg_decls.h"
